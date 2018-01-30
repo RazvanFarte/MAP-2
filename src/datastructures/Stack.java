@@ -22,15 +22,15 @@ public class Stack<E> implements IStack<E> {
     }
 
     @Override
-    public void push(E pushValue) {
+    public void push(E pushValue) throws FullStackException {
         if (top == size - 1) // if stack is full
-            throw new FullStackException(String.format("Stack is full, cannot push %s", pushValue));
+            throw new FullStackException(String.format("Stack is full, cannot push element %s", pushValue.toString()));
 
         elements[++top] = pushValue; // place pushValue on Stack
     }
 
     @Override
-    public E pop() {
+    public E pop() throws EmptyStackException {
         if (top == -1) // if stack is empty
             throw new EmptyStackException("Stack is empty, cannot pop");
 
@@ -44,11 +44,24 @@ public class Stack<E> implements IStack<E> {
 
     @Override
     public boolean isFull() {
-        return top == size;
+        return top == size - 1;
     }
 
     @Override
     public boolean isEmpty() {
         return top == -1;
+    }
+
+    @Override
+    public String toString() {
+
+        String resultString = new String();
+
+        for (E elem: this.elements
+             ) {
+            resultString += elem.toString() + "\n";
+        }
+
+        return resultString;
     }
 }
