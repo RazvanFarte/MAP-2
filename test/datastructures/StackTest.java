@@ -7,13 +7,10 @@ import org.junit.Test;
 
 public class StackTest {
 
-    @Test
-    public void testStack() {
+    private void testImplementation(IStack<Double> doubleStack, IStack<Integer> integerStack) {
+
         double[] doubleElements = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6 };
         int[] integerElements = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
-
-        IStack<Double> doubleStack = new Stack<Double>(5);
-        IStack<Integer> integerStack = new Stack<Integer>(10);
 
         // test Push Double
         try {
@@ -65,5 +62,12 @@ public class StackTest {
 
         Assert.assertTrue(integerStack.isEmpty() == true);
 
+    }
+
+    @Test
+    public void testStack() {
+
+        testImplementation(new Stack<Double>(5), new Stack<Integer>(10));
+        //testImplementation(new Stack2<Double>(5), new Stack2<Integer>(10));
     }
 }
