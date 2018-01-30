@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd13115b-5223-4ee6-bbb0-ec99d22f4759" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/datastructures/Dictionary.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/datastructures/IDictionary.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/datastructures/IList.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/datastructures/List.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/IStack.java" afterPath="$PROJECT_DIR$/src/datastructures/IStack.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/Stack2.java" afterPath="$PROJECT_DIR$/src/datastructures/Stack2.java" />
-      <change beforePath="$PROJECT_DIR$/test/datastructures/StackTest.java" afterPath="$PROJECT_DIR$/test/datastructures/StackTest.java" />
-    </list>
+    <list default="true" id="fd13115b-5223-4ee6-bbb0-ec99d22f4759" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
