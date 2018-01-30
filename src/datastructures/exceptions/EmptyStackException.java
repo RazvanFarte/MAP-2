@@ -1,4 +1,11 @@
 package datastructures.exceptions;
 
-public class EmptyStackException {
+public class EmptyStackException extends RuntimeException {
+    public EmptyStackException() {
+        this("Stack is empty");
+    }
+
+    public EmptyStackException(String exception) {
+        super(exception);
+    }
 }

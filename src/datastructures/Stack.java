@@ -1,6 +1,9 @@
 package datastructures;
 
-public class Stack<T> implements IStack<T> {
+import datastructures.exceptions.EmptyStackException;
+import datastructures.exceptions.FullStackException;
+
+public class Stack<E> implements IStack<E> {
     private final int size;
 
     private int top;
@@ -18,6 +21,7 @@ public class Stack<T> implements IStack<T> {
         elements = (E[]) new Object[size]; // create array
     }
 
+    @Override
     public void push(E pushValue) {
         if (top == size - 1) // if stack is full
             throw new FullStackException(String.format("Stack is full, cannot push %s", pushValue));
@@ -25,30 +29,26 @@ public class Stack<T> implements IStack<T> {
         elements[++top] = pushValue; // place pushValue on Stack
     }
 
+    @Override
     public E pop() {
         if (top == -1) // if stack is empty
             throw new EmptyStackException("Stack is empty, cannot pop");
 
         return elements[top--]; // remove and return top element of Stack
     }
-}
 
-class EmptyStackException extends RuntimeException {
-    public EmptyStackException() {
-        this("Stack is empty");
+    @Override
+    public E top() {
+        return elements[top];
     }
 
-    public EmptyStackException(String exception) {
-        super(exception);
-    }
-}
-
-class FullStackException extends RuntimeException {
-    public FullStackException() {
-        this("Stack is full");
+    @Override
+    public boolean isFull() {
+        return top == size;
     }
 
-    public FullStackException(String exception) {
-        super(exception);
+    @Override
+    public boolean isEmpty() {
+        return top == -1;
     }
 }
