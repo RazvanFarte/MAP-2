@@ -1,6 +1,8 @@
 package models.statements;
 
 import datastructures.Dictionary;
+import datastructures.IDictionary;
+import datastructures.IStack;
 import datastructures.Stack2;
 import models.expressions.Expression;
 
@@ -38,18 +40,17 @@ public class AssignStatement implements IStatement {
 
     @Override
     public ProgramState execute(ProgramState programState) {
-        Stack2<IStatement> stack = programState.getExecutionStack();
-        Dictionary<String, Integer> symbolTable = programState.getSymbolTable();
+        IStack<IStatement> stack = programState.getExecutionStack();
+        IDictionary<String, Integer> symbolTable = programState.getSymbolTable();
 
         int value = expression.evaluate(symbolTable);
 
-        if( symbolTable.isDefined(id)) {
-            symbolTable.update(id, value);
+        if( symbolTable.get(id) != null) {
+            symbolTable.replace(id, value);
         } else {
-            symbolTable.add(id, value);
+            symbolTable.put(id, value);
         }
 
         return programState;
-
     }
 }

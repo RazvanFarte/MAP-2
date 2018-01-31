@@ -1,6 +1,6 @@
 package models.statements;
 
-import datastructures.Stack2;
+import datastructures.IStack;
 
 public class ComparisonStatement implements IStatement {
 
@@ -44,7 +44,7 @@ public class ComparisonStatement implements IStatement {
 
     @Override
     public ProgramState execute(ProgramState programState) {
-        Stack2<IStatement> stack = programState.getExecutionStack();
+        IStack<IStatement> stack = programState.getExecutionStack();
         stack.push(second);
         stack.push(first);
         return programState;

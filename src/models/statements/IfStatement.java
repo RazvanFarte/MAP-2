@@ -1,5 +1,7 @@
 package models.statements;
 
+import models.expressions.Expression;
+
 public class IfStatement implements IStatement {
 
     Expression expression;
