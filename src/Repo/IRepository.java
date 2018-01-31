@@ -1,11 +1,13 @@
 package Repo;
 
-import java.util.ArrayList;
+import datastructures.IList;
 
 public interface IRepository<E> {
 
     public void add(E entity);
 
-    public ArrayList<E> getEntities();
+    public IList<E> getEntities();
+
+    public E getCurrentEntity();
 
 }

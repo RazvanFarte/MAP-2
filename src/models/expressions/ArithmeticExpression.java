@@ -18,4 +18,9 @@ public class ArithmeticExpression extends Expression {
             default: return 0;
         }
     }
+
+    @Override
+    public String toString() {
+        throw new RuntimeException("Method must be implemented");
+    }
 }

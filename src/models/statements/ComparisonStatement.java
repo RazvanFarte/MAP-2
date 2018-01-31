@@ -7,6 +7,11 @@ public class ComparisonStatement implements IStatement {
     private IStatement first;
     private IStatement second;
 
+    public ComparisonStatement(IStatement first, IStatement second) {
+        this.first = first;
+        this.second = second;
+    }
+
     public IStatement getFirst() {
         return first;
     }
@@ -40,7 +45,7 @@ public class ComparisonStatement implements IStatement {
     @Override
     public ProgramState execute(ProgramState programState) {
         Stack2<IStatement> stack = programState.getExecutionStack();
-        stack.push(snd);
+        stack.push(second);
         stack.push(first);
         return programState;
     }
