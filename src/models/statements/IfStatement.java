@@ -1,6 +1,10 @@
 package models.statements;
 
 import models.expressions.Expression;
+import models.expressions.exceptions.DivisionByZeroException;
+import models.expressions.exceptions.NotDefinedException;
+import models.expressions.exceptions.UnknownOperatorException;
+import models.statements.exceptions.StatementException;
 
 public class IfStatement implements IStatement {
 
@@ -44,7 +48,21 @@ public class IfStatement implements IStatement {
     }
 
     @Override
-    public ProgramState execute(ProgramState programState) {
+    public ProgramState execute(ProgramState programState) throws StatementException {
+
+        int expressionValue;
+        try {
+            expressionValue = expression.evaluate(programState.getSymbolTable());
+        } catch (DivisionByZeroException | UnknownOperatorException | NotDefinedException e) {
+            throw new StatementException("Cannot execute expression in if statement: " + this.toString());
+        }
+
+        if(expressionValue == 0) {
+            programState.getExecutionStack().push(this.elseStatement);
+        } else {
+            programState.getExecutionStack().push(this.thenStatement);
+        }
+
         return programState;
     }
 }

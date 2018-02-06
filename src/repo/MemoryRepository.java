@@ -1,9 +1,7 @@
-package Repo;
+package repo;
 
 import datastructures.IList;
 import datastructures.List;
-
-import java.util.ArrayList;
 
 public class MemoryRepository<E> implements IRepository<E>{
     private IList<E> entities;

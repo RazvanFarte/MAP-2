@@ -1,10 +1,11 @@
 package models.statements;
 
-import datastructures.Dictionary;
 import datastructures.IDictionary;
-import datastructures.IStack;
-import datastructures.Stack2;
 import models.expressions.Expression;
+import models.expressions.exceptions.DivisionByZeroException;
+import models.expressions.exceptions.NotDefinedException;
+import models.expressions.exceptions.UnknownOperatorException;
+import models.statements.exceptions.StatementException;
 
 public class AssignStatement implements IStatement {
 
@@ -39,11 +40,15 @@ public class AssignStatement implements IStatement {
     }
 
     @Override
-    public ProgramState execute(ProgramState programState) {
-        IStack<IStatement> stack = programState.getExecutionStack();
+    public ProgramState execute(ProgramState programState) throws StatementException {
         IDictionary<String, Integer> symbolTable = programState.getSymbolTable();
 
-        int value = expression.evaluate(symbolTable);
+        int value;
+        try {
+            value = expression.evaluate(symbolTable);
+        } catch (DivisionByZeroException | UnknownOperatorException | NotDefinedException e) {
+            throw new StatementException("Cannot execute expression in assignment statement " + this.toString());
+        }
 
         if( symbolTable.get(id) != null) {
             symbolTable.replace(id, value);

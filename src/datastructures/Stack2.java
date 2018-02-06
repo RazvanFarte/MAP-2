@@ -10,7 +10,7 @@ public class Stack2<T> implements IStack<T> {
 
     private java.util.Stack<T> mStack;
 
-    public Stack2(int size) {
+    public Stack2() {
         this.mStack = new Stack<>();
     }
 
@@ -27,7 +27,7 @@ public class Stack2<T> implements IStack<T> {
     }
 
     @Override
-    public T top() {
+    public T top() throws EmptyStackException{
         if(this.mStack.isEmpty())
             throw new EmptyStackException("Empty stack. No element on top of stack.");
         return mStack.peek();
@@ -48,7 +48,10 @@ public class Stack2<T> implements IStack<T> {
 
         String resultString = new String();
 
-        for (T elem: mStack) resultString += elem.toString() + "\n";
+        resultString += "{";
+        for (T elem: mStack)
+            resultString += elem.toString() + " | ";
+        resultString += "}\n";
 
         return resultString;
     }

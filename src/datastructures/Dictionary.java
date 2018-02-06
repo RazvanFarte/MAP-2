@@ -270,4 +270,17 @@ public class Dictionary<K, V> implements IDictionary<K, V> {
     public Set<Entry<K, V>> entrySet() {
         return mMap.entrySet();
     }
+
+    @Override
+    public String toString() {
+        String resultString = new String();
+
+        resultString += "{";
+        for (Entry<K, V> elem: this.mMap.entrySet()) {
+            resultString += elem.getKey() + ":" + elem.getValue() + " | ";
+        }
+        resultString += "}\n";
+
+        return resultString;
+    }
 }

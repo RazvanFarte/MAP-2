@@ -4,6 +4,8 @@ import datastructures.IDictionary;
 import datastructures.IList;
 import datastructures.IStack;
 
+import java.util.Formatter;
+
 public class ProgramState {
 
     IStack<IStatement> executionStack;
@@ -54,6 +56,19 @@ public class ProgramState {
 
     @Override
     public String toString() {
-        throw new RuntimeException("Must be implemented");
+        //throw new RuntimeException("Must be implemented");
+//        Formatter mFormatter = new Formatter();
+
+//        return mFormatter.format("Program state:\n\tExecution stack: %0\n\tTable of values: %1\n\tPrinted values: %2\n",
+//            this.executionStack.toString(),
+//            this.symbolTable.toString(),
+//            this.output.toString()
+//        ).toString();
+        StringBuilder sb = new StringBuilder();
+
+        return new StringBuilder().append("Program state:\n")
+                .append("\tExecution stack:\n\t\t").append(executionStack.toString())
+                .append("\tTable of values:\n\t\t").append(symbolTable.toString())
+                .append("\tOutput values:\n\t\t").append(output.toString()).toString();
     }
 }

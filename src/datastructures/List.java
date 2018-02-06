@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.function.Consumer;
 
 public class List<E> implements IList<E> {
 
@@ -126,5 +127,22 @@ public class List<E> implements IList<E> {
     @Override
     public java.util.List<E> subList(int fromIndex, int toIndex) {
         return mList.subList(fromIndex, toIndex);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("[");
+
+        mList.forEach(new Consumer<E>() {
+            public void accept(E element) {
+                stringBuilder.append(element.toString() + ", ");
+            }
+        });
+
+        stringBuilder.append("]\n");
+
+        return stringBuilder.toString();
     }
 }
