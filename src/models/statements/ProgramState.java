@@ -1,6 +1,7 @@
 package models.statements;
 
 import datastructures.IDictionary;
+import datastructures.IFileTable;
 import datastructures.IList;
 import datastructures.IStack;
 
@@ -11,14 +12,15 @@ public class ProgramState {
     IStack<IStatement> executionStack;
     IDictionary<String, Integer> symbolTable;
     IList<Integer> output;
+    IFileTable fileDescriptors;
 
     IStatement originalProgram;
 
-    public ProgramState(IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable,
-                        IList<Integer> output, IStatement originalProgram) {
+    public ProgramState(IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable, IList<Integer> output, IFileTable fileDescriptors, IStatement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.output = output;
+        this.fileDescriptors = fileDescriptors;
         this.originalProgram = originalProgram;
     }
 
@@ -46,6 +48,14 @@ public class ProgramState {
         this.output = output;
     }
 
+    public IFileTable getFileDescriptors() {
+        return fileDescriptors;
+    }
+
+    public void setFileDescriptors(IFileTable fileDescriptors) {
+        this.fileDescriptors = fileDescriptors;
+    }
+
     public IStatement getOriginalProgram() {
         return originalProgram;
     }
@@ -69,6 +79,8 @@ public class ProgramState {
         return new StringBuilder().append("Program state:\n")
                 .append("\tExecution stack:\n\t\t").append(executionStack.toString())
                 .append("\tTable of values:\n\t\t").append(symbolTable.toString())
-                .append("\tOutput values:\n\t\t").append(output.toString()).toString();
+                .append("\tOutput values:\n\t\t").append(output.toString())
+                .append("\tFile descriptors:\n\t\t").append(this.fileDescriptors.toString())
+                .toString();
     }
 }

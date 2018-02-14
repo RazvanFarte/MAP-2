@@ -1,6 +1,7 @@
 import controllers.Controller;
 import controllers.exceptions.ControllerException;
 import datastructures.Dictionary;
+import datastructures.FileTable;
 import datastructures.List;
 import datastructures.Stack2;
 import models.expressions.ConstantExpression;
@@ -25,7 +26,7 @@ public class Main {
 
         Stack2<IStatement> executionStack = new Stack2<>();
         executionStack.push(originalStatement2);
-        mRepository.add(new ProgramState(executionStack, new Dictionary<>(), new List<>(), originalStatement2));
+        mRepository.add(new ProgramState(executionStack, new Dictionary<>(), new List<>(), new FileTable(), originalStatement2));
 
         return new Controller(mRepository);
     }
