@@ -4,6 +4,7 @@ import datastructures.Dictionary;
 import datastructures.FileTable;
 import datastructures.List;
 import datastructures.Stack2;
+import datastructures.exceptions.FullStackException;
 import models.expressions.ConstantExpression;
 import models.expressions.VariableExpression;
 import models.statements.*;
@@ -25,7 +26,11 @@ public class Main {
         IRepository<ProgramState> mRepository = new MemoryRepository<>();
 
         Stack2<IStatement> executionStack = new Stack2<>();
-        executionStack.push(originalStatement2);
+        try {
+            executionStack.push(originalStatement2);
+        } catch (FullStackException e) {
+            e.printStackTrace();
+        }
         mRepository.add(new ProgramState(executionStack, new Dictionary<>(), new List<>(), new FileTable(), originalStatement2));
 
         return new Controller(mRepository);
