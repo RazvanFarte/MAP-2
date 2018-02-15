@@ -3,16 +3,19 @@ package controllers;
 import controllers.exceptions.ControllerException;
 import datastructures.exceptions.EmptyStackException;
 import models.statements.exceptions.StatementException;
+import repo.ILogRepository;
 import repo.IRepository;
 import datastructures.IStack;
 import models.statements.IStatement;
 import models.statements.ProgramState;
 
+import java.io.IOException;
+
 public class Controller {
 
-    private IRepository<ProgramState> programStates;
+    private ILogRepository programStates;
 
-    public Controller(IRepository<ProgramState> programStates) {
+    public Controller(ILogRepository programStates) {
         this.programStates = programStates;
     }
 
@@ -30,7 +33,7 @@ public class Controller {
         }
     }
 
-    public void execute() throws ControllerException {
+    public void execute() throws ControllerException, IOException {
         ProgramState state = programStates.getCurrentEntity();
 
         System.out.print(state.toString());
@@ -39,6 +42,8 @@ public class Controller {
             executeStep(state);
             System.out.print(state.toString());
             System.out.println("========================================");
+            programStates.logProgramStates();
+
         }
 
         System.out.println("Execution terminated!");

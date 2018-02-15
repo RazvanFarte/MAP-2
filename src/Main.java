@@ -8,9 +8,12 @@ import datastructures.exceptions.FullStackException;
 import models.expressions.ConstantExpression;
 import models.expressions.VariableExpression;
 import models.statements.*;
+import repo.ILogRepository;
 import repo.IRepository;
+import repo.LogRepository;
 import repo.MemoryRepository;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -54,7 +57,7 @@ public class Main {
         IStatement statement = getStatement(3);
 
         //Creating Repository
-        IRepository<ProgramState> mRepository = new MemoryRepository<>();
+        ILogRepository mRepository = new LogRepository("logFile");
 
         Stack2<IStatement> executionStack = new Stack2<>();
         executionStack.push(statement);
@@ -70,6 +73,8 @@ public class Main {
         try {
             interpreterController.execute();
         } catch (ControllerException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
