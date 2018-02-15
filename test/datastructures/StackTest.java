@@ -13,15 +13,15 @@ public class StackTest {
         int[] integerElements = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
 
         // test Push Double
-        try {
-
-            for (double element : doubleElements) {
-                doubleStack.push(element);
-            }
-        } catch (FullStackException fullStackException) {
+        for (double element : doubleElements) {
+            doubleStack.push(element);
         }
 
-        Assert.assertTrue(doubleStack.top() == 5.5);
+        try {
+            Assert.assertTrue(doubleStack.top() == 5.5);
+        } catch (EmptyStackException e) {
+            Assert.assertTrue(false);
+        }
 
         // test Pop Double
 
@@ -37,16 +37,16 @@ public class StackTest {
         Assert.assertTrue(doubleStack.isEmpty() == true);
 
         // test push method with integer stack
-        try {
-
-            for (int element : integerElements) {
-                integerStack.push(element);
-            }
-        } catch (FullStackException fullStackException) {
+        for (int el : integerElements) {
+            integerStack.push(el);
         }
 
         Assert.assertTrue(integerStack.isFull() == true);
-        Assert.assertTrue(integerStack.top() == 10);
+        try {
+            Assert.assertTrue(integerStack.top() == 10);
+        } catch (EmptyStackException e) {
+            Assert.assertTrue(false);
+        }
 
 
         // test pop method with integer stack
@@ -61,7 +61,6 @@ public class StackTest {
         }
 
         Assert.assertTrue(integerStack.isEmpty() == true);
-
     }
 
     @Test

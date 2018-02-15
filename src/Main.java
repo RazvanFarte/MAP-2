@@ -26,11 +26,8 @@ public class Main {
         IRepository<ProgramState> mRepository = new MemoryRepository<>();
 
         Stack2<IStatement> executionStack = new Stack2<>();
-        try {
-            executionStack.push(originalStatement2);
-        } catch (FullStackException e) {
-            e.printStackTrace();
-        }
+        executionStack.push(originalStatement2);
+
         mRepository.add(new ProgramState(executionStack, new Dictionary<>(), new List<>(), new FileTable(), originalStatement2));
 
         return new Controller(mRepository);

@@ -22,9 +22,9 @@ public class Stack<E> implements IStack<E> {
     }
 
     @Override
-    public void push(E pushValue) throws FullStackException {
-        if (top == size - 1) // if stack is full
-            throw new FullStackException(String.format("Stack is full, cannot push element %s", pushValue.toString()));
+    public void push(E pushValue)  {
+//        if (top == size - 1) // if stack is full
+//            throw new FullStackException(String.format("Stack is full, cannot push element %s", pushValue.toString()));
 
         elements[++top] = pushValue; // place pushValue on Stack
     }

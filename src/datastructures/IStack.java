@@ -4,7 +4,7 @@ import datastructures.exceptions.EmptyStackException;
 import datastructures.exceptions.FullStackException;
 
 public interface IStack<T> {
-    void push(T element) throws FullStackException;
+    void push(T element);
     T pop() throws EmptyStackException;
     T top() throws EmptyStackException;
     boolean isEmpty();

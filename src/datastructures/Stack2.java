@@ -15,10 +15,8 @@ public class Stack2<T> implements IStack<T> {
     }
 
     @Override
-    public void push(T element) throws FullStackException {
+    public void push(T element) {
         mStack.push(element);
-        if(false)
-            throw new FullStackException("This will never be called. It is only added for class adapter compatibility");
     }
 
     @Override
