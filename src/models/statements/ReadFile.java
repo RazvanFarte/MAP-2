@@ -62,4 +62,11 @@ public class ReadFile implements IStatement {
         return programState;
     }
 
+    @Override
+    public String toString() {
+        return "ReadFile{" +
+                "fileDescriptor='" + fileDescriptor + '\'' +
+                ", variableName='" + variableName + '\'' +
+                '}';
+    }
 }

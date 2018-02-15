@@ -41,4 +41,11 @@ public class CloseRFile implements IStatement {
 
         return programState;
     }
+
+    @Override
+    public String toString() {
+        return "CloseRFile{" +
+                "fileDescriptor='" + fileDescriptor + '\'' +
+                '}';
+    }
 }

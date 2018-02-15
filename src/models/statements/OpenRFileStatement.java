@@ -35,6 +35,14 @@ public class OpenRFileStatement implements IStatement {
     }
 
     @Override
+    public String toString() {
+        return "OpenRFileStatement{" +
+                "fileDescriptorVariable='" + fileDescriptorVariable + '\'' +
+                ", fileName='" + fileName + '\'' +
+                '}';
+    }
+
+    @Override
     public ProgramState execute(ProgramState programState) throws StatementException {
 
         for(FileDescriptor fileDescriptor: programState.getFileDescriptors().values())
