@@ -24,9 +24,18 @@ public class MultipleStatements implements IStatement {
 
     @Override
     public String toString() {
-        return "MultipleStatements{" +
-                "statements=" + statements +
-                '}';
+
+        StringBuilder sb = new StringBuilder();
+
+        statements.forEach(new Consumer<IStatement>() {
+            @Override
+            public void accept(IStatement statement) {
+                sb.append(statement.toString());
+                sb.append("; ");
+            }
+        });
+
+        return sb.toString();
     }
 
     @Override

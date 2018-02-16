@@ -49,4 +49,11 @@ public class Controller {
         System.out.println("Execution terminated!");
 
     }
+
+    @Override
+    public String toString() {
+        return "Controller{" +
+                programStates.getCurrentEntity().getExecutionStack().toString() +
+                '}';
+    }
 }
