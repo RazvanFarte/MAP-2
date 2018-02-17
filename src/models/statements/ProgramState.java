@@ -1,9 +1,6 @@
 package models.statements;
 
-import datastructures.IDictionary;
-import datastructures.IFileTable;
-import datastructures.IList;
-import datastructures.IStack;
+import datastructures.*;
 
 import java.util.Formatter;
 
@@ -13,15 +10,25 @@ public class ProgramState {
     IDictionary<String, Integer> symbolTable;
     IList<Integer> output;
     IFileTable fileDescriptors;
+    IHeap heap;
 
     IStatement originalProgram;
 
-    public ProgramState(IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable, IList<Integer> output, IFileTable fileDescriptors, IStatement originalProgram) {
+    public ProgramState(IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable, IList<Integer> output, IFileTable fileDescriptors, IHeap heap, IStatement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.output = output;
         this.fileDescriptors = fileDescriptors;
+        this.heap = heap;
         this.originalProgram = originalProgram;
+    }
+
+    public IHeap getHeap() {
+        return heap;
+    }
+
+    public void setHeap(IHeap heap) {
+        this.heap = heap;
     }
 
     public IStack<IStatement> getExecutionStack() {
@@ -81,6 +88,7 @@ public class ProgramState {
                 .append("\tTable of values:\n\t\t").append(symbolTable.toString())
                 .append("\tOutput values:\n\t\t").append(output.toString())
                 .append("\tFile descriptors:\n\t\t").append(this.fileDescriptors.toString())
+                .append("\tHeap:\n\t\t").append(this.heap.toString())
                 .toString();
     }
 }

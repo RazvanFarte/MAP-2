@@ -27,9 +27,9 @@ public class Controller {
             statement = stack.pop();
             return statement.execute(state);
         } catch (EmptyStackException e) {
-            throw new ControllerException("No more statements to execute on execution stack.");
+            throw new ControllerException("No more statements to execute on execution stack.", e);
         } catch (StatementException e) {
-            throw new ControllerException("Cannot execute statement: " + statement.toString());
+            throw new ControllerException("Cannot execute statement: " + statement.toString(), e);
         }
     }
 

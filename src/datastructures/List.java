@@ -34,6 +34,26 @@ public class List<E> implements IList<E> {
         return mList.iterator();
     }
 
+    public Iterator<E> reversedIterator() {
+        final ListIterator<E> i = mList.listIterator();
+        return new Iterator<E>() {
+            @Override
+            public boolean hasNext() {
+                return i.hasPrevious();
+            }
+
+            @Override
+            public E next() {
+                return i.previous();
+            }
+
+            @Override
+            public void remove() {
+                i.remove();
+            }
+        };
+    }
+
     @Override
     public Object[] toArray() {
         return mList.toArray();

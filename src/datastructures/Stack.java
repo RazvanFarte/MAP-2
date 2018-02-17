@@ -3,6 +3,8 @@ package datastructures;
 import datastructures.exceptions.EmptyStackException;
 import datastructures.exceptions.FullStackException;
 
+import java.lang.reflect.Array;
+
 public class Stack<E> implements IStack<E> {
     private final int size;
 

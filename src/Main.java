@@ -4,6 +4,7 @@ import datastructures.Dictionary;
 import datastructures.FileTable;
 import datastructures.List;
 import datastructures.Stack2;
+import datastructures.exceptions.Heap;
 import models.commands.ExitCommand;
 import models.commands.RunExampleCommand;
 import models.expressions.ConstantExpression;
@@ -50,6 +51,13 @@ public class Main {
                 IStatement closeFile = new CloseRFile("var_f");
 
                 return new MultipleStatements(Arrays.asList(closeFile, ifStatement, printValue, readFile, openFile));
+            case 4: //v=10;new(v,20);new(a,22);print(v)
+                IStatement print = new PrintStatement(new VariableExpression("v"));
+                IStatement newA = new NewStatement("a", new ConstantExpression(22));
+                IStatement newV = new NewStatement("v", new ConstantExpression(20));
+                IStatement assign = new AssignStatement("v", new ConstantExpression(10));
+
+                return new MultipleStatements(Arrays.asList(print, newA, newV, assign));
             default:
                 throw new InvalidChoiceException("Invalid workflow selected. No existent choice.");
         }
@@ -67,25 +75,22 @@ public class Main {
         Stack2<IStatement> executionStack = new Stack2<>();
         executionStack.push(statement);
 
-        mRepository.add(new ProgramState(executionStack, new Dictionary<>(), new List<>(), new FileTable(), statement));
+        mRepository.add(new ProgramState(executionStack, new Dictionary<>(), new List<>(), new FileTable(), new Heap(), statement));
 
         return new Controller(mRepository);
     }
 
     public static void main(String args[]) {
 
-        Controller ctrl1, ctrl2, ctrl3 = null;
+        List<Controller> controllers = new List<>();
         try {
-            ctrl1 = initializeController(1);
-            ctrl2 = initializeController(2);
-            ctrl3 = initializeController(3);
-
             TextMenu view = new TextMenu();
-
             view.addCommand(new ExitCommand("0", "exit"));
-            view.addCommand(new RunExampleCommand("1", ctrl1.toString(), ctrl1));
-            view.addCommand(new RunExampleCommand("2", ctrl2.toString(), ctrl2));
-            view.addCommand(new RunExampleCommand("3", ctrl3.toString(), ctrl3));
+
+            for(int i = 1; i <= 4; i++){
+                Controller ctrl = initializeController(i);
+                view.addCommand(new RunExampleCommand(new Integer(i).toString(), ctrl.toString(), ctrl));
+            }
 
             view.show();
         } catch (ViewException e) {
