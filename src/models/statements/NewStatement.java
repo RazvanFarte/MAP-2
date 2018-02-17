@@ -48,7 +48,7 @@ public class NewStatement implements IStatement {
 
         int result;
         try {
-            result = this.expression.evaluate(programState.getSymbolTable());
+            result = this.expression.evaluate(programState.getSymbolTable(), programState.getHeap());
         } catch (DivisionByZeroException | UnknownOperatorException | NotDefinedException e) {
             throw new StatementException(e.getMessage());
         }
@@ -59,21 +59,22 @@ public class NewStatement implements IStatement {
         try {
             //Adds the value to the heap
             programState.getHeap().put(newAddress, result);
+            programState.getSymbolTable().put(this.variableName, newAddress);
         } catch (NegativeAddressException e) {
             e.printStackTrace();
         } catch (TakenAddressException e) {
             //If location took, overwrite the location address
             try {
                 programState.getHeap().replace(newAddress, result);
+
+                //Assign to the pointer the new heap address location
+                programState.getSymbolTable().replace(this.variableName, newAddress);
             } catch (NegativeAddressException e1) {
                 e1.printStackTrace();
             } catch (NotAllocatedAddressException e1) {
                 e1.printStackTrace();
             }
         }
-
-        //Assign to the pointer the new heap address location
-        programState.getSymbolTable().replace(this.variableName, newAddress);
 
         return programState;
     }

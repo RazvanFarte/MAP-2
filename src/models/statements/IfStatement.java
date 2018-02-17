@@ -52,7 +52,7 @@ public class IfStatement implements IStatement {
 
         int expressionValue;
         try {
-            expressionValue = expression.evaluate(programState.getSymbolTable());
+            expressionValue = expression.evaluate(programState.getSymbolTable(), programState.getHeap());
         } catch (DivisionByZeroException | UnknownOperatorException | NotDefinedException e) {
             throw new StatementException("Cannot execute expression in if statement: " + this.toString());
         }

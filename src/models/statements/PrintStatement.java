@@ -32,7 +32,7 @@ public class PrintStatement implements IStatement {
 
         int value;
         try {
-            value = expression.evaluate(programState.getSymbolTable());
+            value = expression.evaluate(programState.getSymbolTable(), programState.getHeap());
         } catch (DivisionByZeroException | UnknownOperatorException | NotDefinedException e) {
             throw new StatementException("Cannot execute expression in print statement " + this.toString());
         }

@@ -45,7 +45,7 @@ public class AssignStatement implements IStatement {
 
         int value;
         try {
-            value = expression.evaluate(symbolTable);
+            value = expression.evaluate(symbolTable, programState.getHeap());
         } catch (DivisionByZeroException | UnknownOperatorException | NotDefinedException e) {
             throw new StatementException("Cannot execute expression in assignment statement " + this.toString());
         }

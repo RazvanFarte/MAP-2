@@ -1,6 +1,7 @@
 package models.expressions;
 
 import datastructures.IDictionary;
+import datastructures.IHeap;
 
 public class ConstantExpression extends Expression {
 
@@ -19,7 +20,7 @@ public class ConstantExpression extends Expression {
     }
 
     @Override
-    public int evaluate(IDictionary<String, Integer> symbolTable) {
+    public int evaluate(IDictionary<String, Integer> symbolTable, IHeap heap) {
         return constantValue;
     }
 

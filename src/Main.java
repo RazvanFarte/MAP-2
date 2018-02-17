@@ -7,7 +7,9 @@ import datastructures.Stack2;
 import datastructures.exceptions.Heap;
 import models.commands.ExitCommand;
 import models.commands.RunExampleCommand;
+import models.expressions.ArithmeticExpression;
 import models.expressions.ConstantExpression;
+import models.expressions.ReadHeapExpression;
 import models.expressions.VariableExpression;
 import models.statements.*;
 import repo.ILogRepository;
@@ -58,6 +60,19 @@ public class Main {
                 IStatement assign = new AssignStatement("v", new ConstantExpression(10));
 
                 return new MultipleStatements(Arrays.asList(print, newA, newV, assign));
+
+            case 5: //v=10;new(v,20);new(a,22);print(v)
+                IStatement print5 = new PrintStatement(new ArithmeticExpression(new ReadHeapExpression("v")
+                        , new ConstantExpression(100)
+                        , '+'));
+                IStatement print25 = new PrintStatement(new ArithmeticExpression(new ReadHeapExpression("a")
+                        , new ConstantExpression(100)
+                        , '+'));
+                IStatement newA5 = new NewStatement("a", new ConstantExpression(22));
+                IStatement newV5 = new NewStatement("v", new ConstantExpression(20));
+                IStatement assign5 = new AssignStatement("v", new ConstantExpression(10));
+
+                return new MultipleStatements(Arrays.asList(print5, print25, newA5, newV5, assign5));
             default:
                 throw new InvalidChoiceException("Invalid workflow selected. No existent choice.");
         }
@@ -87,7 +102,7 @@ public class Main {
             TextMenu view = new TextMenu();
             view.addCommand(new ExitCommand("0", "exit"));
 
-            for(int i = 1; i <= 4; i++){
+            for(int i = 1; i <= 5; i++){
                 Controller ctrl = initializeController(i);
                 view.addCommand(new RunExampleCommand(new Integer(i).toString(), ctrl.toString(), ctrl));
             }

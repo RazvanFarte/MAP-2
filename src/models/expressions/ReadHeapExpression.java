@@ -1,6 +1,9 @@
 package models.expressions;
 
 import datastructures.IDictionary;
+import datastructures.IHeap;
+import datastructures.exceptions.NegativeAddressException;
+import datastructures.exceptions.NotAllocatedAddressException;
 import models.expressions.exceptions.DivisionByZeroException;
 import models.expressions.exceptions.NotDefinedException;
 import models.expressions.exceptions.UnknownOperatorException;
@@ -21,10 +24,18 @@ public class ReadHeapExpression extends Expression {
         this.variableName = variableName;
     }
 
-    @Override
-    public int evaluate(IDictionary<String, Integer> symbolTable) throws DivisionByZeroException, UnknownOperatorException, NotDefinedException {
+    public int evaluate(IDictionary<String, Integer> symbolTable, IHeap heap) throws DivisionByZeroException, UnknownOperatorException, NotDefinedException {
         int addressValue = symbolTable.get(variableName);
 
-        return 0;
+        int value = 0;
+        try {
+            value = heap.get(addressValue);
+        } catch (NotAllocatedAddressException e) {
+            e.printStackTrace();
+        } catch (NegativeAddressException e) {
+            e.printStackTrace();
+        }
+
+        return value;
     }
 }

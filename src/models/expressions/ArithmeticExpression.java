@@ -1,6 +1,7 @@
 package models.expressions;
 
 import datastructures.IDictionary;
+import datastructures.IHeap;
 import models.expressions.exceptions.DivisionByZeroException;
 import models.expressions.exceptions.NotDefinedException;
 import models.expressions.exceptions.UnknownOperatorException;
@@ -42,15 +43,15 @@ public class ArithmeticExpression extends Expression {
     }
 
     @Override
-    public int evaluate(IDictionary<String, Integer> symbolTable) throws DivisionByZeroException, UnknownOperatorException, NotDefinedException {
+    public int evaluate(IDictionary<String, Integer> symbolTable, IHeap heap) throws DivisionByZeroException, UnknownOperatorException, NotDefinedException {
         switch (operator) {
-            case '+': return expression1.evaluate(symbolTable) + expression2.evaluate(symbolTable);
-            case '-': return expression1.evaluate(symbolTable) - expression2.evaluate(symbolTable);
-            case '*': return expression1.evaluate(symbolTable) * expression2.evaluate(symbolTable);
+            case '+': return expression1.evaluate(symbolTable, heap) + expression2.evaluate(symbolTable, heap);
+            case '-': return expression1.evaluate(symbolTable, heap) - expression2.evaluate(symbolTable, heap);
+            case '*': return expression1.evaluate(symbolTable, heap) * expression2.evaluate(symbolTable, heap);
             case '/':
-                if(expression2.evaluate(symbolTable) == 0)
+                if(expression2.evaluate(symbolTable, heap) == 0)
                     throw new DivisionByZeroException("Division by zero for expresion" + this.toString());
-                return expression1.evaluate(symbolTable) / expression2.evaluate(symbolTable);
+                return expression1.evaluate(symbolTable, heap) / expression2.evaluate(symbolTable, heap);
             default: throw new UnknownOperatorException("Operation +'" + operator + "' does not exist.");
         }
     }

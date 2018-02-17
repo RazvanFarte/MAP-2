@@ -1,6 +1,7 @@
 package models.expressions;
 
 import datastructures.IDictionary;
+import datastructures.IHeap;
 import models.expressions.exceptions.NotDefinedException;
 
 public class VariableExpression extends Expression {
@@ -20,7 +21,7 @@ public class VariableExpression extends Expression {
     }
 
     @Override
-    public int evaluate(IDictionary<String, Integer> symbolTable) throws NotDefinedException {
+    public int evaluate(IDictionary<String, Integer> symbolTable, IHeap heap) throws NotDefinedException {
         if(!symbolTable.containsKey(id))
             throw new NotDefinedException("Variable with id #" + id + " not defined in Table of Symbols.");
         return symbolTable.get(id);
