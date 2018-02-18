@@ -6,10 +6,7 @@ import datastructures.Stack2;
 import datastructures.Heap;
 import models.commands.ExitCommand;
 import models.commands.RunExampleCommand;
-import models.expressions.ArithmeticExpression;
-import models.expressions.ConstantExpression;
-import models.expressions.ReadHeapExpression;
-import models.expressions.VariableExpression;
+import models.expressions.*;
 import models.statements.*;
 import repo.ILogRepository;
 import repo.LogRepository;
@@ -94,6 +91,52 @@ public class Main {
                 list7.add(new AssignStatement("v", new ConstantExpression(10)));
 
                 return new MultipleStatements(list7);
+
+            case 8:
+                return new PrintStatement(new ArithmeticExpression(
+                        new ConstantExpression(10),
+                        new BooleanExpression(
+                                new ConstantExpression(2),
+                                new ConstantExpression(6),
+                                BooleanExpression.BooleanOperator.LT
+                        ),
+                        '+'
+                ));
+            case 9:
+                return new PrintStatement(new BooleanExpression(
+                        new ArithmeticExpression(
+                                new ConstantExpression(10),
+                                new ConstantExpression(2),
+                                '+'
+                        ),
+                        new ConstantExpression(6),
+                        BooleanExpression.BooleanOperator.LT
+                ));
+            case 10:
+                return new MultipleStatements(Arrays.asList(
+                        new PrintStatement(new VariableExpression("v")),
+                        new WhileStatement(
+                                new ArithmeticExpression(
+                                        new VariableExpression("v"),
+                                        new ConstantExpression(4),
+                                        '-'
+                                ),
+                                new CompoundStatement(
+                                        new PrintStatement(
+                                                new VariableExpression("v")
+                                        ),
+                                        new AssignStatement(
+                                                "v",
+                                                new ArithmeticExpression(
+                                                        new VariableExpression("v"),
+                                                        new ConstantExpression(1),
+                                                        '-'
+                                                )
+                                        )
+                                )
+                        ),
+                        new AssignStatement("v", new ConstantExpression(6))
+                ));
             default:
                 throw new InvalidChoiceException("Invalid workflow selected. No existent choice.");
         }
@@ -123,7 +166,7 @@ public class Main {
             TextMenu view = new TextMenu();
             view.addCommand(new ExitCommand("0", "exit"));
 
-            for(int i = 1; i <= 7; i++){
+            for(int i = 1; i <= 10; i++){
                 Controller ctrl = initializeController(i);
                 view.addCommand(new RunExampleCommand(new Integer(i).toString(), ctrl.toString(), ctrl));
             }

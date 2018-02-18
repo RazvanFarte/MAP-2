@@ -1,0 +1,132 @@
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | v=6 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | }
+	Table of values:
+		{v:6 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | (print(v), v=v - 1) | }
+	Table of values:
+		{v:6 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | v=v - 1 | print(v) | }
+	Table of values:
+		{v:6 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | v=v - 1 | }
+	Table of values:
+		{v:6 | }
+	Output values:
+		[6, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | }
+	Table of values:
+		{v:5 | }
+	Output values:
+		[6, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | (print(v), v=v - 1) | }
+	Table of values:
+		{v:5 | }
+	Output values:
+		[6, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | v=v - 1 | print(v) | }
+	Table of values:
+		{v:5 | }
+	Output values:
+		[6, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | v=v - 1 | }
+	Table of values:
+		{v:5 | }
+	Output values:
+		[6, 5, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | WhileStatement{testExpression=v - 4, executeStatement=(print(v), v=v - 1)} | }
+	Table of values:
+		{v:4 | }
+	Output values:
+		[6, 5, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{print(v) | }
+	Table of values:
+		{v:4 | }
+	Output values:
+		[6, 5, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+	Execution stack:
+		{}
+	Table of values:
+		{v:4 | }
+	Output values:
+		[6, 5, 4, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}

@@ -1,0 +1,11 @@
+Program state:
+	Execution stack:
+		{}
+	Table of values:
+		{}
+	Output values:
+		[11, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
