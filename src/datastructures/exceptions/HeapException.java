@@ -1,12 +1,14 @@
 package datastructures.exceptions;
 
-public class DataStructureException extends Exception {
+public class HeapException extends DataStructureException{
+
     /**
      * Constructs a new exception with {@code null} as its detail message.
      * The cause is not initialized, and may subsequently be initialized by a
      * call to {@link #initCause}.
      */
-    public DataStructureException() {
+    public HeapException() {
+        super();
     }
 
     /**
@@ -17,7 +19,7 @@ public class DataStructureException extends Exception {
      * @param message the detail message. The detail message is saved for
      *                later retrieval by the {@link #getMessage()} method.
      */
-    public DataStructureException(String message) {
+    public HeapException(String message) {
         super(message);
     }
 
@@ -35,7 +37,7 @@ public class DataStructureException extends Exception {
      *                unknown.)
      * @since 1.4
      */
-    public DataStructureException(String message, Throwable cause) {
+    public HeapException(String message, Throwable cause) {
         super(message, cause);
     }
 }

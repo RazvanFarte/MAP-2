@@ -1,8 +1,13 @@
 package datastructures;
 
+import datastructures.exceptions.HeapException;
 import datastructures.exceptions.NegativeAddressException;
 import datastructures.exceptions.NotAllocatedAddressException;
 import datastructures.exceptions.TakenAddressException;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
 
 public interface IHeap {
 
@@ -41,5 +46,9 @@ public interface IHeap {
      * @param address
      * @throws NegativeAddressException
      */
-    public void release(int address) throws NegativeAddressException, NotAllocatedAddressException;
+    public void release(int address) throws HeapException;
+
+    public Set<Map.Entry<Integer, Integer>> entrySet();
+
+    public void garbageCollect(Collection<Integer> symTableValues) throws HeapException;
 }

@@ -1,24 +1,40 @@
-package datastructures.exceptions;
+package datastructures;
 
-import datastructures.Dictionary;
-import datastructures.IHeap;
+import datastructures.exceptions.HeapException;
+import datastructures.exceptions.NegativeAddressException;
+import datastructures.exceptions.NotAllocatedAddressException;
+import datastructures.exceptions.TakenAddressException;
 
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Heap implements IHeap {
 
-    private Dictionary<Integer, Integer> heap;
+    private Map<Integer, Integer> heap;
     public static int NULL = 0;
 
     public Heap() {
-        this.heap = new Dictionary<>();
+        this.heap = new HashMap<>();
     }
 
     public Map<Integer, Integer> getHeap() {
         return heap;
-}
+    }
 
+    @Override
+    public void garbageCollect(Collection<Integer> symTableValues) throws HeapException {
+        Map<Integer,Integer> result = this.heap.entrySet().stream().filter(e->symTableValues.contains(e.getKey()))
+                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
+
+        // we are doing this because we also want
+        // to free the positions of the removed
+        // values
+        for(Integer key : this.heap.keySet()) {
+            if(!result.containsKey(key)){
+                this.release(key);
+            }
+        }
+    }
 
     /** If address is out of heap memory( address < 0), return false.
      * @param address
@@ -129,6 +145,13 @@ public class Heap implements IHeap {
     }
 
     @Override
+    public Set<Map.Entry<Integer, Integer>> entrySet() {
+        return this.heap.entrySet();
+    }
+
+
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -145,6 +168,6 @@ public class Heap implements IHeap {
     public String toString() {
         return "Heap{" +
                 heap.toString() +
-                '}';
+                "}\n";
     }
 }

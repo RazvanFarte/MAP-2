@@ -1,0 +1,243 @@
+Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
+	Table of values:
+		{v:10 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
+	Table of values:
+		{v:10 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
+	Table of values:
+		{v:10 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
+	Table of values:
+		{v:10 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
+	Table of values:
+		{v:10 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | NewStatement{variableName='a', expression=22} | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | print(Expression + 100) | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}Program state:
+	Execution stack:
+		{print(Expression + 100) | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[122, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}Program state:
+	Execution stack:
+		{}
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[122, 120, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}

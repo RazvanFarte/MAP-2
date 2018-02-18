@@ -1,6 +1,6 @@
 package datastructures.exceptions;
 
-public class TakenAddressException extends DataStructureException {
+public class TakenAddressException extends HeapException {
     /**
      * Constructs a new exception with {@code null} as its detail message.
      * The cause is not initialized, and may subsequently be initialized by a

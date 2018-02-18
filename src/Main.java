@@ -1,10 +1,9 @@
 import controllers.Controller;
-import controllers.exceptions.ControllerException;
 import datastructures.Dictionary;
 import datastructures.FileTable;
 import datastructures.List;
 import datastructures.Stack2;
-import datastructures.exceptions.Heap;
+import datastructures.Heap;
 import models.commands.ExitCommand;
 import models.commands.RunExampleCommand;
 import models.expressions.ArithmeticExpression;
@@ -18,8 +17,7 @@ import views.TextMenu;
 import views.exceptions.InvalidChoiceException;
 import views.exceptions.ViewException;
 
-import javax.xml.soap.Text;
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -73,6 +71,29 @@ public class Main {
                 IStatement assign5 = new AssignStatement("v", new ConstantExpression(10));
 
                 return new MultipleStatements(Arrays.asList(print5, print25, newA5, newV5, assign5));
+
+            case 6:
+                java.util.List<IStatement> list6 = new ArrayList<IStatement>();
+                list6.add(new PrintStatement(new ReadHeapExpression("a")));
+                list6.add(new PrintStatement(new VariableExpression("a")));
+                list6.add(new WriteHeapStatement("a", new ConstantExpression(30)));
+                list6.add(new NewStatement("a", new ConstantExpression(22)));
+                list6.add(new NewStatement("v", new ConstantExpression(20)));
+                list6.add(new AssignStatement("v", new ConstantExpression(10)));
+
+                return new MultipleStatements(list6);
+
+            case 7:
+                java.util.List<IStatement> list7 = new ArrayList<IStatement>();
+                list7.add(new AssignStatement("a", new ConstantExpression(0)));
+                list7.add(new PrintStatement(new ReadHeapExpression("a")));
+                list7.add(new PrintStatement(new VariableExpression("a")));
+                list7.add(new WriteHeapStatement("a", new ConstantExpression(30)));
+                list7.add(new NewStatement("a", new ConstantExpression(22)));
+                list7.add(new NewStatement("v", new ConstantExpression(20)));
+                list7.add(new AssignStatement("v", new ConstantExpression(10)));
+
+                return new MultipleStatements(list7);
             default:
                 throw new InvalidChoiceException("Invalid workflow selected. No existent choice.");
         }
@@ -102,7 +123,7 @@ public class Main {
             TextMenu view = new TextMenu();
             view.addCommand(new ExitCommand("0", "exit"));
 
-            for(int i = 1; i <= 5; i++){
+            for(int i = 1; i <= 7; i++){
                 Controller ctrl = initializeController(i);
                 view.addCommand(new RunExampleCommand(new Integer(i).toString(), ctrl.toString(), ctrl));
             }

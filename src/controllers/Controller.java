@@ -1,7 +1,13 @@
 package controllers;
 
 import controllers.exceptions.ControllerException;
+import datastructures.Dictionary;
+import datastructures.IDictionary;
+import datastructures.IHeap;
 import datastructures.exceptions.EmptyStackException;
+import datastructures.exceptions.HeapException;
+import datastructures.exceptions.NegativeAddressException;
+import datastructures.exceptions.NotAllocatedAddressException;
 import models.statements.exceptions.StatementException;
 import repo.ILogRepository;
 import repo.IRepository;
@@ -10,6 +16,11 @@ import models.statements.IStatement;
 import models.statements.ProgramState;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Controller {
 
@@ -40,6 +51,12 @@ public class Controller {
 
         while(!state.getExecutionStack().isEmpty()){
             executeStep(state);
+            try {
+                state.getHeap().garbageCollect(state.getSymbolTable().values());
+            } catch (HeapException e) {
+                e.printStackTrace();
+            }
+
             System.out.print(state.toString());
             System.out.println("========================================");
             programStates.logProgramStates();

@@ -38,4 +38,11 @@ public class ReadHeapExpression extends Expression {
 
         return value;
     }
+
+    @Override
+    public String toString() {
+        return "ReadHeapExpression{" +
+                "variableName='" + variableName + '\'' +
+                '}';
+    }
 }

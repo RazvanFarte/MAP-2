@@ -1,0 +1,78 @@
+Program state:
+	Execution stack:
+		{print(ReadHeapExpression{variableName='a'}) | print(a) | WriteHeapStatement{variableName='a', expression=30} | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(ReadHeapExpression{variableName='a'}) | print(a) | WriteHeapStatement{variableName='a', expression=30} | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
+	Table of values:
+		{v:10 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}
+}Program state:
+	Execution stack:
+		{print(ReadHeapExpression{variableName='a'}) | print(a) | WriteHeapStatement{variableName='a', expression=30} | NewStatement{variableName='a', expression=22} | }
+	Table of values:
+		{v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | }
+}Program state:
+	Execution stack:
+		{print(ReadHeapExpression{variableName='a'}) | print(a) | WriteHeapStatement{variableName='a', expression=30} | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:22 | }
+}Program state:
+	Execution stack:
+		{print(ReadHeapExpression{variableName='a'}) | print(a) | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:30 | }
+}Program state:
+	Execution stack:
+		{print(ReadHeapExpression{variableName='a'}) | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[2, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:30 | }
+}Program state:
+	Execution stack:
+		{}
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[2, 30, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1:20 | 2:30 | }
+}
