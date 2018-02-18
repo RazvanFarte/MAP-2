@@ -1,11 +1,12 @@
 package models.statements;
 
 import datastructures.*;
-
-import java.util.Formatter;
+import datastructures.exceptions.EmptyStackException;
+import models.statements.exceptions.StatementException;
 
 public class ProgramState {
 
+    int id;
     IStack<IStatement> executionStack;
     IDictionary<String, Integer> symbolTable;
     IList<Integer> output;
@@ -14,7 +15,7 @@ public class ProgramState {
 
     IStatement originalProgram;
 
-    public ProgramState(IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable, IList<Integer> output, IFileTable fileDescriptors, IHeap heap, IStatement originalProgram) {
+    public ProgramState(int id, IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable, IList<Integer> output, IFileTable fileDescriptors, IHeap heap, IStatement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.output = output;
@@ -71,19 +72,21 @@ public class ProgramState {
         this.originalProgram = originalProgram;
     }
 
+    public boolean isNotCompleted() {
+        return !this.executionStack.isEmpty();
+    }
+
+    public ProgramState oneStep() throws EmptyStackException, StatementException {
+        IStatement statement = this.executionStack.pop();
+        return statement.execute(this);
+    }
+
     @Override
     public String toString() {
-        //throw new RuntimeException("Must be implemented");
-//        Formatter mFormatter = new Formatter();
-
-//        return mFormatter.format("Program state:\n\tExecution stack: %0\n\tTable of values: %1\n\tPrinted values: %2\n",
-//            this.executionStack.toString(),
-//            this.symbolTable.toString(),
-//            this.output.toString()
-//        ).toString();
         StringBuilder sb = new StringBuilder();
 
         return new StringBuilder().append("Program state:\n")
+                .append(this.id).append('\n')
                 .append("\tExecution stack:\n\t\t").append(executionStack.toString())
                 .append("\tTable of values:\n\t\t").append(symbolTable.toString())
                 .append("\tOutput values:\n\t\t").append(output.toString())

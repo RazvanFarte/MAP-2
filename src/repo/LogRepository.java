@@ -25,10 +25,10 @@ public class LogRepository extends MemoryRepository<ProgramState> implements ILo
     }
 
     @Override
-    public void logProgramStates() throws IOException {
+    public void logProgramStates(ProgramState programState) throws IOException {
         PrintWriter printWriter = new PrintWriter(new BufferedWriter(new FileWriter(this.logFile, true)));
 
-        printWriter.append(this.getCurrentEntity().toString());
+        printWriter.append(programState.toString());
 
         printWriter.close();
     }

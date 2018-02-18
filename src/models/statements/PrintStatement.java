@@ -39,6 +39,6 @@ public class PrintStatement implements IStatement {
 
         programState.output.add(new Integer(value));
 
-        return programState;
+        return null;
     }
 }

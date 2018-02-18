@@ -76,6 +76,6 @@ public class NewStatement implements IStatement {
             }
         }
 
-        return programState;
+        return null;
     }
 }

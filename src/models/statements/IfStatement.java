@@ -63,6 +63,6 @@ public class IfStatement implements IStatement {
             programState.getExecutionStack().push(this.thenStatement);
         }
 
-        return programState;
+        return null;
     }
 }

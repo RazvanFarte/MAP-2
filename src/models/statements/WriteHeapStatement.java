@@ -61,6 +61,6 @@ public class WriteHeapStatement implements IStatement {
         }
 
 
-        return programState;
+        return null;
     }
 }

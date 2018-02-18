@@ -52,6 +52,6 @@ public class WhileStatement implements IStatement {
             throw new StatementException("Cannot evaluate expression " + testExpression.toString(), e);
         }
 
-        return programState;
+        return null;
     }
 }

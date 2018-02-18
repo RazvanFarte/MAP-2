@@ -47,7 +47,7 @@ public class ComparisonStatement implements IStatement {
         IStack<IStatement> stack = programState.getExecutionStack();
         stack.push(second);
         stack.push(first);
-        return programState;
+        return null;
     }
 
 }

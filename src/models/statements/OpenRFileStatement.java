@@ -63,7 +63,7 @@ public class OpenRFileStatement implements IStatement {
 
         programState.getSymbolTable().put(this.fileDescriptorVariable, fileIndex);
 
-        return programState;
+        return null;
     }
 
 

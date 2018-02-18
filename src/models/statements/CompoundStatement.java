@@ -34,7 +34,7 @@ public class CompoundStatement implements IStatement {
         programState.getExecutionStack().push(this.secondStatement);
         programState.getExecutionStack().push(this.firstStatement);
 
-        return programState;
+        return null;
     }
 
     @Override

@@ -39,7 +39,7 @@ public class CloseRFile implements IStatement {
 
         programState.getFileDescriptors().remove(fd);
 
-        return programState;
+        return null;
     }
 
     @Override

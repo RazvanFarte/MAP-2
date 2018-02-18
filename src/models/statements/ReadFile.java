@@ -59,7 +59,7 @@ public class ReadFile implements IStatement {
 
         programState.getSymbolTable().put(getVariableName(), parsedValue);
 
-        return programState;
+        return null;
     }
 
     @Override

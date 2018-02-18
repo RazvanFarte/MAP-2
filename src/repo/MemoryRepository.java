@@ -19,7 +19,7 @@ public class MemoryRepository<E> implements IRepository<E>{
     }
 
     @Override
-    public E getCurrentEntity() {
-        return entities.get(0);
+    public void setEntities(IList<E> entities) {
+        this.entities = entities;
     }
 }

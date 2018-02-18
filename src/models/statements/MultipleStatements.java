@@ -48,6 +48,6 @@ public class MultipleStatements implements IStatement {
             }
         });
 
-        return programState;
+        return null;
     }
 }

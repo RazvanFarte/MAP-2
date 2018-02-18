@@ -56,6 +56,6 @@ public class AssignStatement implements IStatement {
             symbolTable.put(id, value);
         }
 
-        return programState;
+        return null;
     }
 }

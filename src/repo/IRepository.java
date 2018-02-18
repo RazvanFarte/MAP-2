@@ -8,6 +8,5 @@ public interface IRepository<E> {
 
     public IList<E> getEntities();
 
-    public E getCurrentEntity();
-
+    public void setEntities(IList<E> entities);
 }

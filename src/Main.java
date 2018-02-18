@@ -154,7 +154,7 @@ public class Main {
         Stack2<IStatement> executionStack = new Stack2<>();
         executionStack.push(statement);
 
-        mRepository.add(new ProgramState(executionStack, new Dictionary<>(), new List<>(), new FileTable(), new Heap(), statement));
+        mRepository.add(new ProgramState(, executionStack, new Dictionary<>(), new List<>(), new FileTable(), new Heap(), statement, ));
 
         return new Controller(mRepository);
     }
