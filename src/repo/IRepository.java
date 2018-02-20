@@ -1,12 +1,10 @@
 package repo;
 
-import datastructures.IList;
-
 public interface IRepository<E> {
 
     public void add(E entity);
 
-    public IList<E> getEntities();
+    public java.util.List<E> getEntities();
 
-    public void setEntities(IList<E> entities);
+    public void setEntities(java.util.List<E> entities);
 }

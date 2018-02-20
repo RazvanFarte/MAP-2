@@ -4,7 +4,7 @@ import datastructures.IList;
 import datastructures.List;
 
 public class MemoryRepository<E> implements IRepository<E>{
-    private IList<E> entities;
+    private java.util.List<E> entities;
 
     public MemoryRepository() {
         this.entities = new List<>();
@@ -14,12 +14,13 @@ public class MemoryRepository<E> implements IRepository<E>{
         this.entities.add(car);
     }
 
-    public IList<E> getEntities() {
+    @Override
+    public java.util.List<E> getEntities() {
         return entities;
     }
 
     @Override
-    public void setEntities(IList<E> entities) {
+    public void setEntities(java.util.List<E> entities) {
         this.entities = entities;
     }
 }

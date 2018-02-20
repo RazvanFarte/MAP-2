@@ -1,26 +1,17 @@
 package controllers;
 
 import controllers.exceptions.ControllerException;
-import datastructures.*;
-import datastructures.exceptions.EmptyStackException;
-import datastructures.exceptions.HeapException;
-import datastructures.exceptions.NegativeAddressException;
-import datastructures.exceptions.NotAllocatedAddressException;
-import models.statements.exceptions.StatementException;
-import repo.ILogRepository;
-import repo.IRepository;
-import models.statements.IStatement;
+import datastructures.IList;
 import models.statements.ProgramState;
+import repo.ILogRepository;
 
 import java.io.IOException;
-import java.util.Collection;
+import java.net.ConnectException;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
-import java.util.stream.Collector;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 public class Controller {
@@ -36,22 +27,18 @@ public class Controller {
         return programStates.stream().filter(x -> x.isNotCompleted()).collect(Collectors.toList());
     }
 
-    public void executeOneStepForAllThreads(List<ProgramState> programStates) {
+    public void executeOneStepForAllThreads(List<ProgramState> programStates) throws IOException, ControllerException {
 
-        programStates.forEach(programState -> {
-            try {
-                this.programStates.logProgramStates(programState);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        for (ProgramState programState : programStates) {
+            this.programStates.logProgramStates(programState);
+        }
 
         List<Callable<ProgramState>> callList = programStates.
                 stream().
                 map((ProgramState p) -> (Callable<ProgramState>)(() -> {return p.oneStep();})).
                 collect(Collectors.toList());
 
-        List<ProgramState> newProgramStates;
+        List<ProgramState> newProgramStates = null;
         try {
             newProgramStates = executorService.invokeAll(callList)
                     .stream()
@@ -63,46 +50,40 @@ public class Controller {
                         } catch (ExecutionException e) {
                             e.printStackTrace();
                         }
+                        return null;
                     })
                     .filter(p -> p != null)
                     .collect(Collectors.toList());
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new ControllerException("Thread stuff", e);
         }
 
         programStates.addAll(newProgramStates);
 
-        this.programStates.setEntities();
-
-    }
-
-    public void execute() throws ControllerException, IOException {
-        ProgramState state = programStates.getCurrentEntity();
-
-        System.out.print(state.toString());
-
-        while(!state.getExecutionStack().isEmpty()){
-            executeStep(state);
-            try {
-                state.getHeap().garbageCollect(state.getSymbolTable().values());
-            } catch (HeapException e) {
-                e.printStackTrace();
-            }
-
-            System.out.print(state.toString());
-            System.out.println("========================================");
-            programStates.logProgramStates();
-
+        for (ProgramState programState : programStates) {
+            this.programStates.logProgramStates(programState);
         }
 
-        System.out.println("Execution terminated!");
+        this.programStates.setEntities(newProgramStates);
+    }
 
+    public void execute() throws IOException, ControllerException {
+        executorService = Executors.newFixedThreadPool(2);
+
+        List<ProgramState> programStates = removeCompletedPrograms(this.programStates.getEntities());
+
+        while(programStates.size() > 0) {
+            executeOneStepForAllThreads(programStates);
+            programStates = removeCompletedPrograms(this.programStates.getEntities());
+        }
+
+        executorService.shutdownNow();
     }
 
     @Override
     public String toString() {
         return "Controller{" +
-                programStates.getCurrentEntity().getExecutionStack().toString() +
+                programStates.getEntities().get(0).getExecutionStack().toString() +
                 '}';
     }
 }

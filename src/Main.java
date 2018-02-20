@@ -137,6 +137,26 @@ public class Main {
                         ),
                         new AssignStatement("v", new ConstantExpression(6))
                 ));
+
+            case 11:
+                java.util.List<IStatement> list11 = new ArrayList<IStatement>();
+                list11.add(new PrintStatement(new ReadHeapExpression("a")));
+                list11.add(new PrintStatement(new VariableExpression("v")));
+                list11.add(new ForkStatement(
+                        new MultipleStatements(
+                                Arrays.asList(
+                                        new PrintStatement(new ReadHeapExpression("a")),
+                                        new PrintStatement(new VariableExpression("v")),
+                                        new AssignStatement("v", new ConstantExpression(32)),
+                                        new WriteHeapStatement("a", new ConstantExpression(30))
+                                )
+                        )
+                ));
+                list11.add(new NewStatement("a", new ConstantExpression(22)));
+                list11.add(new AssignStatement("v", new ConstantExpression(10)));
+
+                return new MultipleStatements(list11);
+
             default:
                 throw new InvalidChoiceException("Invalid workflow selected. No existent choice.");
         }
@@ -154,7 +174,7 @@ public class Main {
         Stack2<IStatement> executionStack = new Stack2<>();
         executionStack.push(statement);
 
-        mRepository.add(new ProgramState(, executionStack, new Dictionary<>(), new List<>(), new FileTable(), new Heap(), statement, ));
+        mRepository.add(new ProgramState(1, executionStack, new Dictionary<>(), new List<>(), new FileTable(), new Heap(), statement));
 
         return new Controller(mRepository);
     }
@@ -166,7 +186,7 @@ public class Main {
             TextMenu view = new TextMenu();
             view.addCommand(new ExitCommand("0", "exit"));
 
-            for(int i = 1; i <= 10; i++){
+            for(int i = 1; i <= 11; i++){
                 Controller ctrl = initializeController(i);
                 view.addCommand(new RunExampleCommand(new Integer(i).toString(), ctrl.toString(), ctrl));
             }

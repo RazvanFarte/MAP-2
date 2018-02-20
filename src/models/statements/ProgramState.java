@@ -22,6 +22,7 @@ public class ProgramState {
         this.fileDescriptors = fileDescriptors;
         this.heap = heap;
         this.originalProgram = originalProgram;
+        this.id = id;
     }
 
     public IHeap getHeap() {

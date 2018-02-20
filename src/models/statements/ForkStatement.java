@@ -38,7 +38,8 @@ public class ForkStatement implements IStatement {
                 (Dictionary<String, Integer>) ((Dictionary<String, Integer>) programState.getSymbolTable()).clone();
 
 
-        ProgramState newProgramState = new ProgramState(programState.id * 10,
+        ProgramState newProgramState = new ProgramState(
+                programState.id * 10,
                 newExecutionStack,
                 newSymbolTable,
                 programState.output,
