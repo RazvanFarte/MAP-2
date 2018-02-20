@@ -29,9 +29,7 @@ public class Controller {
 
     public void executeOneStepForAllThreads(List<ProgramState> programStates) throws IOException, ControllerException {
 
-        for (ProgramState programState : programStates) {
-            this.programStates.logProgramStates(programState);
-        }
+
 
         List<Callable<ProgramState>> callList = programStates.
                 stream().
@@ -62,15 +60,21 @@ public class Controller {
 
         for (ProgramState programState : programStates) {
             this.programStates.logProgramStates(programState);
+            System.out.println(programState.toString());
         }
 
-        this.programStates.setEntities(newProgramStates);
+        this.programStates.setEntities(programStates);
     }
 
     public void execute() throws IOException, ControllerException {
         executorService = Executors.newFixedThreadPool(2);
 
         List<ProgramState> programStates = removeCompletedPrograms(this.programStates.getEntities());
+
+        for (ProgramState programState : programStates) {
+            this.programStates.logProgramStates(programState);
+            System.out.println(programState.toString());
+        }
 
         while(programStates.size() > 0) {
             executeOneStepForAllThreads(programStates);

@@ -1,4 +1,17 @@
 Program state:
+1
+	Execution stack:
+		{print(v); NewStatement{variableName='a', expression=22}; NewStatement{variableName='v', expression=20}; v=10;  | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{print(v) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
 	Table of values:
@@ -8,8 +21,21 @@ Program state:
 	File descriptors:
 		{}
 	Heap:
-		Heap{{}
-}Program state:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(v) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | v=10 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{print(v) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
 	Table of values:
@@ -19,8 +45,21 @@ Program state:
 	File descriptors:
 		{}
 	Heap:
-		Heap{{}
-}Program state:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(v) | NewStatement{variableName='a', expression=22} | NewStatement{variableName='v', expression=20} | }
+	Table of values:
+		{v:10 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{print(v) | NewStatement{variableName='a', expression=22} | }
 	Table of values:
@@ -30,10 +69,11 @@ Program state:
 	File descriptors:
 		{}
 	Heap:
-		Heap{{1:20 | }
-}Program state:
+		Heap{{1=20}}
+Program state:
+1
 	Execution stack:
-		{print(v) | }
+		{print(v) | NewStatement{variableName='a', expression=22} | }
 	Table of values:
 		{v:1 | }
 	Output values:
@@ -41,16 +81,40 @@ Program state:
 	File descriptors:
 		{}
 	Heap:
-		Heap{{1:20 | 2:22 | }
-}Program state:
+		Heap{{1=20}}
+Program state:
+1
+	Execution stack:
+		{print(v) | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1=20, 2=22}}
+Program state:
+1
+	Execution stack:
+		{print(v) | }
+	Table of values:
+		{a:2 | v:1 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{1=20, 2=22}}
+Program state:
+1
 	Execution stack:
 		{}
 	Table of values:
-		{v:1 | }
+		{a:2 | v:1 | }
 	Output values:
 		[1, ]
 	File descriptors:
 		{}
 	Heap:
-		Heap{{1:20 | 2:22 | }
-}
+		Heap{{1=20, 2=22}}

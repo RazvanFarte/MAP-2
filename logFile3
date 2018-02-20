@@ -1,4 +1,17 @@
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'}; IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)); print(value); ReadFile{fileDescriptor='var_f', variableName='value'}; OpenRFileStatement{fileDescriptorVariable='var_f', fileName='test.in'};  | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | OpenRFileStatement{fileDescriptorVariable='var_f', fileName='test.in'} | }
 	Table of values:
@@ -7,7 +20,22 @@ Program state:
 		[]
 	File descriptors:
 		{}
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | OpenRFileStatement{fileDescriptorVariable='var_f', fileName='test.in'} | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | }
 	Table of values:
@@ -16,7 +44,22 @@ Program state:
 		[]
 	File descriptors:
 		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | }
+	Table of values:
+		{var_f:0 | }
+	Output values:
+		[]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | }
 	Table of values:
@@ -25,7 +68,22 @@ Program state:
 		[]
 	File descriptors:
 		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | }
 	Table of values:
@@ -34,7 +92,22 @@ Program state:
 		[15, ]
 	File descriptors:
 		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | (ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)) | }
 	Table of values:
@@ -43,7 +116,22 @@ Program state:
 		[15, ]
 	File descriptors:
 		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | (ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)) | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | }
 	Table of values:
@@ -52,7 +140,22 @@ Program state:
 		[15, ]
 	File descriptors:
 		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | print(value) | }
 	Table of values:
@@ -61,7 +164,22 @@ Program state:
 		[15, ]
 	File descriptors:
 		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | print(value) | }
+	Table of values:
+		{var_f:0 | value:50 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{CloseRFile{fileDescriptor='var_f'} | }
 	Table of values:
@@ -70,7 +188,22 @@ Program state:
 		[15, 50, ]
 	File descriptors:
 		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
 Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | }
+	Table of values:
+		{var_f:0 | value:50 | }
+	Output values:
+		[15, 50, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
 	Execution stack:
 		{}
 	Table of values:
@@ -79,3 +212,125 @@ Program state:
 		[15, 50, ]
 	File descriptors:
 		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'}; IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)); print(value); ReadFile{fileDescriptor='var_f', variableName='value'}; OpenRFileStatement{fileDescriptorVariable='var_f', fileName='test.in'};  | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | OpenRFileStatement{fileDescriptorVariable='var_f', fileName='test.in'} | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | }
+	Table of values:
+		{var_f:0 | }
+	Output values:
+		[]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | print(value) | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | IF(value)THEN((ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)))ELSE(print(0)) | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | (ReadFile{fileDescriptor='var_f', variableName='value'}, print(value)) | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | print(value) | ReadFile{fileDescriptor='var_f', variableName='value'} | }
+	Table of values:
+		{var_f:0 | value:15 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | print(value) | }
+	Table of values:
+		{var_f:0 | value:50 | }
+	Output values:
+		[15, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{CloseRFile{fileDescriptor='var_f'} | }
+	Table of values:
+		{var_f:0 | value:50 | }
+	Output values:
+		[15, 50, ]
+	File descriptors:
+		{0:FileDescriptor{filename='var_f'} | }
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{}
+	Table of values:
+		{var_f:0 | value:50 | }
+	Output values:
+		[15, 50, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
