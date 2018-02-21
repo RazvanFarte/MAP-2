@@ -23,6 +23,14 @@ public class Controller {
         this.programStates = programStates;
     }
 
+    public ILogRepository getRepository() {
+        return programStates;
+    }
+
+    public void setRepository(ILogRepository programStates) {
+        this.programStates = programStates;
+    }
+
     public List<ProgramState> removeCompletedPrograms(List<ProgramState> programStates){
         return programStates.stream().filter(x -> x.isNotCompleted()).collect(Collectors.toList());
     }

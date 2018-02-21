@@ -23,4 +23,9 @@ public class MemoryRepository<E> implements IRepository<E>{
     public void setEntities(java.util.List<E> entities) {
         this.entities = entities;
     }
+
+    @Override
+    public int getNumberOfEntities() {
+        return entities.size();
+    }
 }

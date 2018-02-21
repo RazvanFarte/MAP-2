@@ -7,4 +7,6 @@ public interface IRepository<E> {
     public java.util.List<E> getEntities();
 
     public void setEntities(java.util.List<E> entities);
+
+    public int getNumberOfEntities();
 }

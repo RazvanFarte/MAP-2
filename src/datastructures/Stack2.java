@@ -5,6 +5,7 @@ import datastructures.exceptions.EmptyStackException;
 import datastructures.exceptions.FullStackException;
 
 import java.util.Stack;
+import java.util.stream.Stream;
 
 public class Stack2<T> implements IStack<T> {
 
@@ -42,6 +43,12 @@ public class Stack2<T> implements IStack<T> {
     public boolean isFull() {
         return !mStack.isEmpty();
     }
+
+    public Stream stream() {
+        return this.mStack.stream();
+    }
+
+
 
     @Override
     public String toString() {

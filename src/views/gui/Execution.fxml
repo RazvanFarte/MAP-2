@@ -6,19 +6,70 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="views.gui.ExecutionController">
+<GridPane fx:id="window" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="views.gui.ExecutionController">
   <children>
     <TextField fx:id="threadsNumberField" editable="false" prefWidth="230.0" promptText="Number of tables:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
     <ListView fx:id="programStatesListView" prefHeight="236.0" prefWidth="163.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+      <tabs>
+        <Tab text="Files Table">
+          <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+              <center>
+                <TableView fx:id="fileTable" prefHeight="200.0" prefWidth="200.0">
+                  <columns>
+                    <TableColumn prefWidth="75.0" text="Key" />
+                    <TableColumn prefWidth="75.0" text="Value" />
+                  </columns>
+                </TableView>
+              </center>
+            </BorderPane>
+          </content>
+        </Tab>
+        <Tab text="Heap Table">
+          <content>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+              <children>
+                <TableView prefHeight="200.0" prefWidth="200.0">
+                  <columns>
+                    <TableColumn prefWidth="75.0" text="Column X" />
+                    <TableColumn prefWidth="75.0" text="Column X" />
+                  </columns>
+                </TableView>
+              </children>
+            </HBox>
+          </content>
+        </Tab>
+        <Tab text="Symbols Table">
+          <content>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="0">
+      <children>
+        <Label text="Execution Stack:" />
+        <ListView fx:id="executionStackView" prefHeight="200.0" prefWidth="200.0" />
+      </children>
+    </VBox>
+    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+      <children>
+        <Label text="Output" />
+        <ListView fx:id="outputListView" prefHeight="200.0" prefWidth="200.0" />
+      </children>
+    </VBox>
+    <Button mnemonicParsing="false" onMouseClicked="#executeStep" text="Execute Step" GridPane.columnIndex="2" GridPane.rowIndex="2" />
   </children>
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="163.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="311.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="126.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="131.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="259.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="115.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="95.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="221.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="221.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="185.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="185.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
 </GridPane>
