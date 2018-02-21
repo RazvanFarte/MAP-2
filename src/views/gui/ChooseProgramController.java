@@ -1,25 +1,53 @@
+package views.gui;
+
+import com.sun.javafx.collections.ObservableListWrapper;
 import controllers.Controller;
-import datastructures.Dictionary;
-import datastructures.FileTable;
-import datastructures.List;
-import datastructures.Stack2;
-import datastructures.Heap;
-import models.commands.ExitCommand;
-import models.commands.RunExampleCommand;
+import controllers.exceptions.ControllerException;
+import datastructures.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableIntegerArray;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import models.expressions.*;
 import models.statements.*;
 import repo.ILogRepository;
 import repo.LogRepository;
-import views.TextMenu;
 import views.exceptions.InvalidChoiceException;
 import views.exceptions.ViewException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Main {
+public class ChooseProgramController {
 
     private static final String logFile = "logFile";
+
+    public Button continueButton;
+    public ListView<Controller> programsListView = new ListView<>();
+    public Label labelContinue;
+
+    @FXML
+    public void initialize() {
+
+        List<Controller> controllers = new List<>();
+        try {
+            java.util.List<Controller> l = new ArrayList<Controller>();
+            for(int i = 1; i <= 11; i++){
+                l.add(initializeController(i));
+            }
+            programsListView.setItems(FXCollections.observableArrayList(l));
+        } catch (ViewException e) {
+            e.printStackTrace();
+        }
+    }
 
     private static IStatement getStatement(int choice) throws ViewException {
         switch (choice) {
@@ -28,8 +56,8 @@ public class Main {
 
             case 2: // a = 4; print(a);
                 return new CompoundStatement(
-                                new AssignStatement("a", new ConstantExpression(4)),
-                                new PrintStatement(new VariableExpression("a")));
+                        new AssignStatement("a", new ConstantExpression(4)),
+                        new PrintStatement(new VariableExpression("a")));
 
             case 3: /*
                         openRFile(var_f,"test.in");
@@ -41,10 +69,10 @@ public class Main {
                 IStatement readFile = new ReadFile("var_f", "value");
                 IStatement printValue = new PrintStatement(new VariableExpression("value"));
                 IStatement ifStatement = new IfStatement(new VariableExpression("value"),
-                                                        new CompoundStatement(
-                                                                new ReadFile("var_f", "value"),
-                                                                new PrintStatement(new VariableExpression("value"))),
-                                                        new PrintStatement(new ConstantExpression(0)));
+                        new CompoundStatement(
+                                new ReadFile("var_f", "value"),
+                                new PrintStatement(new VariableExpression("value"))),
+                        new PrintStatement(new ConstantExpression(0)));
                 IStatement closeFile = new CloseRFile("var_f");
 
                 return new MultipleStatements(Arrays.asList(closeFile, ifStatement, printValue, readFile, openFile));
@@ -179,21 +207,30 @@ public class Main {
         return new Controller(mRepository);
     }
 
-    public static void main(String args[]) {
+    public void onMouseClicked(MouseEvent mouseEvent) {
 
-        List<Controller> controllers = new List<>();
+        Controller selectedWorkflow = programsListView.getSelectionModel().getSelectedItem();
+
+        if(selectedWorkflow == null) {
+            labelContinue.setText("Choose a value before pressing continue");
+            return;
+        }
+
+        Parent window = null;
+        FXMLLoader executionWindowLoader = new FXMLLoader(getClass().getResource("Execution.fxml"));
         try {
-            TextMenu view = new TextMenu();
-            view.addCommand(new ExitCommand("0", "exit"));
-
-            for(int i = 1; i <= 11; i++){
-                Controller ctrl = initializeController(i);
-                view.addCommand(new RunExampleCommand(new Integer(i).toString(), ctrl.toString(), ctrl));
-            }
-
-            view.show();
-        } catch (ViewException e) {
+            window = executionWindowLoader.load();
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
+        ExecutionController executionController = executionWindowLoader.getController();
+        executionController.setController(selectedWorkflow);
+
+        Stage newStage = new Stage();
+        newStage.setScene(new Scene(window, 400, 300));
+        newStage.setTitle("Execution Window");
+        newStage.show();
+
     }
 }

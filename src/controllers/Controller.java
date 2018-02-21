@@ -28,9 +28,6 @@ public class Controller {
     }
 
     public void executeOneStepForAllThreads(List<ProgramState> programStates) throws IOException, ControllerException {
-
-
-
         List<Callable<ProgramState>> callList = programStates.
                 stream().
                 map((ProgramState p) -> (Callable<ProgramState>)(() -> {return p.oneStep();})).
@@ -58,6 +55,8 @@ public class Controller {
 
         programStates.addAll(newProgramStates);
 
+
+        //TODO Remove
         for (ProgramState programState : programStates) {
             this.programStates.logProgramStates(programState);
             System.out.println(programState.toString());
@@ -71,6 +70,8 @@ public class Controller {
 
         List<ProgramState> programStates = removeCompletedPrograms(this.programStates.getEntities());
 
+
+        //TODO REMOVE
         for (ProgramState programState : programStates) {
             this.programStates.logProgramStates(programState);
             System.out.println(programState.toString());

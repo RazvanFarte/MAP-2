@@ -1,0 +1,72 @@
+Program state:
+1
+	Execution stack:
+		{print(5) | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{}
+	Table of values:
+		{}
+	Output values:
+		[5, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(5) | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{}
+	Table of values:
+		{}
+	Output values:
+		[5, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(5) | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{}
+	Table of values:
+		{}
+	Output values:
+		[5, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
