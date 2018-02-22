@@ -4,6 +4,7 @@ import datastructures.IStack;
 import datastructures.exceptions.EmptyStackException;
 import datastructures.exceptions.FullStackException;
 
+import java.util.Enumeration;
 import java.util.Stack;
 import java.util.stream.Stream;
 
@@ -44,11 +45,9 @@ public class Stack2<T> implements IStack<T> {
         return !mStack.isEmpty();
     }
 
-    public Stream stream() {
-        return this.mStack.stream();
+    public Enumeration<T> enumeration() {
+        return mStack.elements();
     }
-
-
 
     @Override
     public String toString() {
