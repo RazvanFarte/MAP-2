@@ -20,7 +20,9 @@ public class Controller {
     private ExecutorService executorService;
 
     public Controller(ILogRepository programStates) {
+
         this.programStates = programStates;
+        this.executorService = Executors.newFixedThreadPool(2);
     }
 
     public ILogRepository getRepository() {
@@ -71,26 +73,6 @@ public class Controller {
         }
 
         this.programStates.setEntities(programStates);
-    }
-
-    public void execute() throws IOException, ControllerException {
-        executorService = Executors.newFixedThreadPool(2);
-
-        List<ProgramState> programStates = removeCompletedPrograms(this.programStates.getEntities());
-
-
-        //TODO REMOVE
-        for (ProgramState programState : programStates) {
-            this.programStates.logProgramStates(programState);
-            System.out.println(programState.toString());
-        }
-
-        while(programStates.size() > 0) {
-            executeOneStepForAllThreads(programStates);
-            programStates = removeCompletedPrograms(this.programStates.getEntities());
-        }
-
-        executorService.shutdownNow();
     }
 
     @Override
