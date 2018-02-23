@@ -3,12 +3,12 @@ package datastructures;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CountDownLatch implements ICountDownLatch {
+public class LatchTable implements ICountDownLatch {
 
 
     private Map<Integer, Integer> map;
 
-    public CountDownLatch() {
+    public LatchTable() {
         this.map = new HashMap<>();
     }
 
