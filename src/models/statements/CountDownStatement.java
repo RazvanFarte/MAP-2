@@ -43,4 +43,11 @@ public class CountDownStatement implements IStatement {
 
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "CountDownStatement{" +
+                "variableName='" + variableName + '\'' +
+                '}';
+    }
 }
