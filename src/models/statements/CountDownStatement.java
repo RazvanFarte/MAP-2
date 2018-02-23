@@ -30,15 +30,9 @@ public class CountDownStatement implements IStatement {
         }
 
         synchronized (programState.getLatchTable()) {
-            Integer latchAddress = programState.getLatchTable().get(index);
-
-            if(latchAddress == null) {
-                return null;
-            }
-
-            int latchValue = programState.getLatchTable().get(latchAddress);
+            Integer latchValue = programState.getLatchTable().get(index);
             if(latchValue > 0) {
-                programState.getLatchTable().replace(latchAddress, latchValue - 1);
+                programState.getLatchTable().replace(index, latchValue - 1);
                 programState.getOutput().add(programState.id);
             }
         }

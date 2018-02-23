@@ -2,81 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6f30a2a-a0d4-42d7-af37-111b4dde716e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MAP-Project2.iml" afterPath="$PROJECT_DIR$/MAP-Project2.iml" />
-      <change beforePath="$PROJECT_DIR$/logFile10" afterPath="$PROJECT_DIR$/logFile10" />
-      <change beforePath="$PROJECT_DIR$/logFile8" afterPath="$PROJECT_DIR$/logFile8" />
-      <change beforePath="$PROJECT_DIR$/logFile9" afterPath="$PROJECT_DIR$/logFile9" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Controller.java" afterPath="$PROJECT_DIR$/src/controllers/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/exceptions/ControllerException.java" afterPath="$PROJECT_DIR$/src/controllers/exceptions/ControllerException.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/Dictionary.java" afterPath="$PROJECT_DIR$/src/datastructures/Dictionary.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/FileTable.java" afterPath="$PROJECT_DIR$/src/datastructures/FileTable.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/Heap.java" afterPath="$PROJECT_DIR$/src/datastructures/Heap.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/ICountDownLatch.java" afterPath="$PROJECT_DIR$/src/datastructures/ICountDownLatch.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/IDictionary.java" afterPath="$PROJECT_DIR$/src/datastructures/IDictionary.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/IFileTable.java" afterPath="$PROJECT_DIR$/src/datastructures/IFileTable.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/IHeap.java" afterPath="$PROJECT_DIR$/src/datastructures/IHeap.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/IList.java" afterPath="$PROJECT_DIR$/src/datastructures/IList.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/IStack.java" afterPath="$PROJECT_DIR$/src/datastructures/IStack.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/LatchTable.java" afterPath="$PROJECT_DIR$/src/datastructures/LatchTable.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/List.java" afterPath="$PROJECT_DIR$/src/datastructures/List.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/Stack.java" afterPath="$PROJECT_DIR$/src/datastructures/Stack.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/Stack2.java" afterPath="$PROJECT_DIR$/src/datastructures/Stack2.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/DataStructureException.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/DataStructureException.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/DuplicateFileDescriptor.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/DuplicateFileDescriptor.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/EmptyStackException.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/EmptyStackException.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/FullStackException.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/FullStackException.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/HeapException.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/HeapException.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/NegativeAddressException.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/NegativeAddressException.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/NotAllocatedAddressException.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/NotAllocatedAddressException.java" />
-      <change beforePath="$PROJECT_DIR$/src/datastructures/exceptions/TakenAddressException.java" afterPath="$PROJECT_DIR$/src/datastructures/exceptions/TakenAddressException.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/FileDescriptor.java" afterPath="$PROJECT_DIR$/src/models/FileDescriptor.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/ArithmeticExpression.java" afterPath="$PROJECT_DIR$/src/models/expressions/ArithmeticExpression.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/ArithmeticOperator.java" afterPath="$PROJECT_DIR$/src/models/expressions/ArithmeticOperator.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/BooleanExpression.java" afterPath="$PROJECT_DIR$/src/models/expressions/BooleanExpression.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/ConstantExpression.java" afterPath="$PROJECT_DIR$/src/models/expressions/ConstantExpression.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/Expression.java" afterPath="$PROJECT_DIR$/src/models/expressions/Expression.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/ReadHeapExpression.java" afterPath="$PROJECT_DIR$/src/models/expressions/ReadHeapExpression.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/VariableExpression.java" afterPath="$PROJECT_DIR$/src/models/expressions/VariableExpression.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/exceptions/DivisionByZeroException.java" afterPath="$PROJECT_DIR$/src/models/expressions/exceptions/DivisionByZeroException.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/exceptions/ExpressionsException.java" afterPath="$PROJECT_DIR$/src/models/expressions/exceptions/ExpressionsException.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/exceptions/NotDefinedException.java" afterPath="$PROJECT_DIR$/src/models/expressions/exceptions/NotDefinedException.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/expressions/exceptions/UnknownOperatorException.java" afterPath="$PROJECT_DIR$/src/models/expressions/exceptions/UnknownOperatorException.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/AssignStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/AssignStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/AwaitStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/AwaitStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/CloseRFile.java" afterPath="$PROJECT_DIR$/src/models/statements/CloseRFile.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/ComparisonStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/ComparisonStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/CompoundStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/CompoundStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/ConditionalAssignmentStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/ConditionalAssignmentStatement.java" />
       <change beforePath="$PROJECT_DIR$/src/models/statements/CountDownStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/CountDownStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/ForkStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/ForkStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/IStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/IStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/IfStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/IfStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/MultipleStatements.java" afterPath="$PROJECT_DIR$/src/models/statements/MultipleStatements.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/NewStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/NewStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/OpenRFileStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/OpenRFileStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/PrintStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/PrintStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/ProgramState.java" afterPath="$PROJECT_DIR$/src/models/statements/ProgramState.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/ReadFile.java" afterPath="$PROJECT_DIR$/src/models/statements/ReadFile.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/WhileStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/WhileStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/WriteHeapStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/WriteHeapStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/exceptions/StatementException.java" afterPath="$PROJECT_DIR$/src/models/statements/exceptions/StatementException.java" />
-      <change beforePath="$PROJECT_DIR$/src/repo/ILogRepository.java" afterPath="$PROJECT_DIR$/src/repo/ILogRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/repo/IRepository.java" afterPath="$PROJECT_DIR$/src/repo/IRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/repo/LogRepository.java" afterPath="$PROJECT_DIR$/src/repo/LogRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/repo/MemoryRepository.java" afterPath="$PROJECT_DIR$/src/repo/MemoryRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/views/exceptions/InvalidChoiceException.java" afterPath="$PROJECT_DIR$/src/views/exceptions/InvalidChoiceException.java" />
-      <change beforePath="$PROJECT_DIR$/src/views/exceptions/ViewException.java" afterPath="$PROJECT_DIR$/src/views/exceptions/ViewException.java" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/ChooseProgramController.java" afterPath="$PROJECT_DIR$/src/views/gui/ChooseProgramController.java" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/ChooseProgramMain.java" afterPath="$PROJECT_DIR$/src/views/gui/ChooseProgramMain.java" />
-      <change beforePath="$PROJECT_DIR$/src/views/gui/ExecutionController.java" afterPath="$PROJECT_DIR$/src/views/gui/ExecutionController.java" />
-      <change beforePath="$PROJECT_DIR$/test.in" afterPath="$PROJECT_DIR$/test.in" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,8 +37,8 @@
       <file leaf-file-name="CountDownStatement.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/statements/CountDownStatement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="390">
+              <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -161,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/datastructures/LatchTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
                 <element signature="e#616#617#0" expanded="true" />
                 <element signature="e#655#656#0" expanded="true" />
@@ -447,12 +373,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519399656290</updated>
-      <workItem from="1519399662484" duration="2884000" />
+      <workItem from="1519399662484" duration="2967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2884000" />
+    <option name="totallyTimeSpent" value="2967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -498,7 +424,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/models/statements/CountDownStatement.java</url>
-          <line>39</line>
+          <line>33</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -595,7 +521,7 @@
     <entry file="file://$PROJECT_DIR$/src/datastructures/LatchTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="e#616#617#0" expanded="true" />
             <element signature="e#655#656#0" expanded="true" />
@@ -605,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/statements/CountDownStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="390">
+          <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
           <folding />
         </state>
       </provider>
