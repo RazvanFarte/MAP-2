@@ -43,6 +43,9 @@ public class ExecutionController {
     public TableView<Map.Entry<Integer, Integer>> heapTable;
     public TableColumn<Map.Entry<Integer, Integer>, Integer> heapTableIdColumn;
     public TableColumn<Map.Entry<Integer, Integer>, Integer> heapTableValueColumn;
+    public TableView<Map.Entry<Integer, Integer>> latchTable;
+    public TableColumn<Map.Entry<Integer, Integer>, Integer> latchTableAddressColumn;
+    public TableColumn<Map.Entry<Integer, Integer>, Integer> latchTableCounterColumn;
 
     private Controller controller;
     private Dictionary<String, Integer> symbolTable;
@@ -50,6 +53,7 @@ public class ExecutionController {
     private Heap heap;
     private IList<Integer> output;
     private FileTable fileDescriptors;
+    private LatchTable latch;
 
     private List<ProgramState> programStates;
 
@@ -75,6 +79,8 @@ public class ExecutionController {
         heap = (Heap) firstProgramState.getHeap();
         fileDescriptors = (FileTable) firstProgramState.getFileDescriptors();
         output = firstProgramState.getOutput();
+        latch = (LatchTable) firstProgramState.getLatchTable();
+
 
         this.programStatesListView.setItems(FXCollections.observableArrayList(this.controller.getRepository().getEntities()));
 
@@ -86,6 +92,9 @@ public class ExecutionController {
 
         this.heapTableIdColumn.setCellValueFactory(entry -> new SimpleIntegerProperty(entry.getValue().getKey()).asObject());
         this.heapTableValueColumn.setCellValueFactory(entry -> new SimpleIntegerProperty(entry.getValue().getValue()).asObject());
+
+        this.latchTableAddressColumn.setCellValueFactory(entry -> new SimpleIntegerProperty(entry.getValue().getKey()).asObject());
+        this.latchTableCounterColumn.setCellValueFactory(entry -> new SimpleIntegerProperty(entry.getValue().getValue()).asObject());
 
         refreshViews();
     }
@@ -120,6 +129,13 @@ public class ExecutionController {
                 .collect(Collectors.toList());
         this.heapTable.setItems(FXCollections.observableArrayList(l));
         this.heapTable.refresh();
+
+        l = this.latch.entrySet()
+                .stream()
+                .map(entry -> new AbstractMap.SimpleEntry<>(entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
+        this.latchTable.setItems(FXCollections.observableArrayList(l));
+        this.latchTable.refresh();
 
         this.programStatesListView.refresh();
     }

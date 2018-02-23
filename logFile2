@@ -406,3 +406,75 @@ Program state:
 		{}
 	Heap:
 		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{(a=4, print(a)) | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(a) | a=4 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(a) | a=4 | }
+	Table of values:
+		{}
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(a) | }
+	Table of values:
+		{a:4 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{print(a) | }
+	Table of values:
+		{a:4 | }
+	Output values:
+		[]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
+Program state:
+1
+	Execution stack:
+		{}
+	Table of values:
+		{a:4 | }
+	Output values:
+		[4, ]
+	File descriptors:
+		{}
+	Heap:
+		Heap{{}}
