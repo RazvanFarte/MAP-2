@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd13115b-5223-4ee6-bbb0-ec99d22f4759" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/models/statements/AwaitStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/AwaitStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/CountDownStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/CountDownStatement.java" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/models/statements/ConditionalAssignmentStatement.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/views/gui/ChooseProgramController.java" afterPath="$PROJECT_DIR$/src/views/gui/ChooseProgramController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,78 +19,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NewLatchStatement.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/models/statements/NewLatchStatement.java">
+      <file leaf-file-name="ConditionalAssignmentStatement.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/models/statements/ConditionalAssignmentStatement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+            <state relative-caret-position="414">
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#788#789#0" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-                <element signature="e#877#878#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1010#1011#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1224#1225#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1358#1359#0" expanded="true" />
+                <element signature="e#1404#1405#0" expanded="true" />
+                <element signature="e#1446#1447#0" expanded="true" />
+                <element signature="e#1480#1481#0" expanded="true" />
+                <element signature="e#1538#1539#0" expanded="true" />
+                <element signature="e#1584#1585#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExecutionController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/gui/ExecutionController.java">
+      <file leaf-file-name="ChooseProgramController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/gui/ChooseProgramController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="81" column="63" lean-forward="true" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
-              <folding>
-                <element signature="method#setController#0;class#ExecutionController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Heap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/datastructures/Heap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="374">
+              <caret line="234" column="59" lean-forward="true" selection-start-line="234" selection-start-column="59" selection-end-line="234" selection-end-column="59" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AwaitStatement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/statements/AwaitStatement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-              <folding>
-                <element signature="e#219#220#0" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#445#446#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountDownStatement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/statements/CountDownStatement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="47" column="18" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-              <folding>
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#314#315#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -140,7 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/datastructures/exceptions/NegativeAddressException.java" />
         <option value="$PROJECT_DIR$/src/datastructures/exceptions/NotAllocatedAddressException.java" />
         <option value="$PROJECT_DIR$/src/datastructures/exceptions/TakenAddressException.java" />
         <option value="$PROJECT_DIR$/src/datastructures/exceptions/HeapException.java" />
@@ -187,10 +147,11 @@
         <option value="$PROJECT_DIR$/src/datastructures/LatchTable.java" />
         <option value="$PROJECT_DIR$/src/views/gui/ExecutionController.java" />
         <option value="$PROJECT_DIR$/src/models/statements/ForkStatement.java" />
-        <option value="$PROJECT_DIR$/src/views/gui/ChooseProgramController.java" />
         <option value="$PROJECT_DIR$/src/models/statements/AwaitStatement.java" />
         <option value="$PROJECT_DIR$/src/models/statements/CountDownStatement.java" />
         <option value="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" />
+        <option value="$PROJECT_DIR$/src/models/statements/ConditionalAssignmentStatement.java" />
+        <option value="$PROJECT_DIR$/src/views/gui/ChooseProgramController.java" />
       </list>
     </option>
   </component>
@@ -543,6 +504,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -552,7 +514,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5363924" sideWeight="0.50293684" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29905063" sideWeight="0.49706313" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29905063" sideWeight="0.49706313" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -631,31 +593,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/models/statements/ReadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/statements/WriteHeapStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="63" column="19" lean-forward="false" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/statements/WhileStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/statements/IfStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -907,14 +844,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/datastructures/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/datastructures/IHeap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -969,14 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/gui/ChooseProgramController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="225" column="54" lean-forward="false" selection-start-line="225" selection-start-column="54" selection-end-line="225" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/statements/AwaitStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1021,6 +942,64 @@
             <element signature="e#910#911#0" expanded="true" />
             <element signature="e#966#967#0" expanded="true" />
             <element signature="e#1010#1011#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="235" column="51" lean-forward="false" selection-start-line="235" selection-start-column="51" selection-end-line="235" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructures/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logFile13">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2688">
+          <caret line="461" column="10" lean-forward="true" selection-start-line="461" selection-start-column="10" selection-end-line="461" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/gui/ChooseProgramController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="234" column="59" lean-forward="true" selection-start-line="234" selection-start-column="59" selection-end-line="234" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/statements/ConditionalAssignmentStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+            <element signature="e#1404#1405#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
           </folding>
         </state>
       </provider>
