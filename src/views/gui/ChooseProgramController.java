@@ -1,6 +1,5 @@
 package views.gui;
 
-import com.sun.javafx.collections.ObservableListWrapper;
 import controllers.Controller;
 import controllers.exceptions.ControllerException;
 import datastructures.*;
