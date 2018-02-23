@@ -12,17 +12,27 @@ public class ProgramState {
     IList<Integer> output;
     IFileTable fileDescriptors;
     IHeap heap;
+    ICountDownLatch latchTable;
 
     IStatement originalProgram;
 
-    public ProgramState(int id, IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable, IList<Integer> output, IFileTable fileDescriptors, IHeap heap, IStatement originalProgram) {
+    public ProgramState(int id, IStack<IStatement> executionStack, IDictionary<String, Integer> symbolTable, IList<Integer> output, IFileTable fileDescriptors, IHeap heap, ICountDownLatch latchTable, IStatement originalProgram) {
+        this.id = id;
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.output = output;
         this.fileDescriptors = fileDescriptors;
         this.heap = heap;
+        this.latchTable = latchTable;
         this.originalProgram = originalProgram;
-        this.id = id;
+    }
+
+    public ICountDownLatch getLatchTable() {
+        return latchTable;
+    }
+
+    public void setLatchTable(ICountDownLatch latchTable) {
+        this.latchTable = latchTable;
     }
 
     public IHeap getHeap() {
