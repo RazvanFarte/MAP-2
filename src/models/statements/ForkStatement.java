@@ -9,6 +9,8 @@ public class ForkStatement implements IStatement {
 
     IStatement statement;
 
+    private static int counter = 1;
+
     public ForkStatement(IStatement statement) {
         this.statement = statement;
     }
@@ -39,7 +41,7 @@ public class ForkStatement implements IStatement {
 
 
         ProgramState newProgramState = new ProgramState(
-                programState.id * 10,
+                programState.id * 10 + counter++,
                 newExecutionStack,
                 newSymbolTable,
                 programState.output,

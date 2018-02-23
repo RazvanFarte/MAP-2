@@ -30,7 +30,7 @@ public class LatchTable implements ICountDownLatch {
     }
     @Override
     public int get(int address) {
-        return this.map.get(address);
+        return map.get(address);
     }
 
     @Override

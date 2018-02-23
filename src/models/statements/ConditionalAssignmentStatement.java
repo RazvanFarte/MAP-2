@@ -69,17 +69,14 @@ public class ConditionalAssignmentStatement implements IStatement {
         int e1,e2,e3;
         try {
             e1 = this.expression1.evaluate(programState.getSymbolTable(), programState.getHeap());
-            e2 = this.expression2.evaluate(programState.getSymbolTable(), programState.getHeap());
-            e3 = this.expression3.evaluate(programState.getSymbolTable(), programState.getHeap());
+            if(e1 != 0)
+                programState.getExecutionStack().push(new AssignStatement(this.variableName, new ConstantExpression(this.expression2.evaluate(programState.getSymbolTable(), programState.getHeap()))));
+            else
+                programState.getExecutionStack().push(new AssignStatement(this.variableName, new ConstantExpression(this.expression3.evaluate(programState.getSymbolTable(), programState.getHeap()))));
+
         } catch (DivisionByZeroException | UnknownOperatorException | NotDefinedException e) {
             throw new StatementException("Cannot execute conditional assignment", e);
         }
-
-        if(e1 != 0)
-            programState.getExecutionStack().push(new AssignStatement(this.variableName, new ConstantExpression(e2)));
-        else
-            programState.getExecutionStack().push(new AssignStatement(this.variableName, new ConstantExpression(e3)));
-
         return null;
     }
 }

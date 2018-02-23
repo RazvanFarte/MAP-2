@@ -82,7 +82,6 @@ public class ExecutionController {
         latch = (LatchTable) firstProgramState.getLatchTable();
 
 
-        this.programStatesListView.setItems(FXCollections.observableArrayList(this.controller.getRepository().getEntities()));
 
         this.fileTableFileIdColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getKey()).asObject());
         this.fileTableFileNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getValue()));
@@ -107,6 +106,7 @@ public class ExecutionController {
         this.outputListView.refresh();
 
         this.threadsNumberField.setText("No of programs:" + this.controller.getRepository().getNumberOfEntities());
+        this.programStatesListView.setItems(FXCollections.observableArrayList(this.controller.getRepository().getEntities()));
         this.programStatesListView.refresh();
 
         l = this.fileDescriptors.entrySet()

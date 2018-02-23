@@ -192,32 +192,42 @@ public class ChooseProgramController {
                 list12.add(new PrintStatement(new ConstantExpression(100)));
                 list12.add(new AwaitStatement("cnt"));
 
-                list12.add(new CountDownStatement("cnt"));
-                list12.add(new PrintStatement(new ReadHeapExpression("v3")));
-                list12.add(new ForkStatement(new WriteHeapStatement("v3",
-                        new ArithmeticExpression(
-                                new ReadHeapExpression("v3"),
-                                new ConstantExpression(10),
-                                '*'
+                list12.add(new ForkStatement(new MultipleStatements(
+                        Arrays.asList(
+                                new WriteHeapStatement("v3",
+                                        new ArithmeticExpression(
+                                                new ReadHeapExpression("v3"),
+                                                new ConstantExpression(10),
+                                                '*'
+                                        )),
+                                new PrintStatement(new ReadHeapExpression("v3")),
+                                new CountDownStatement("cnt")
                         ))));
 
-                list12.add(new CountDownStatement("cnt"));
-                list12.add(new PrintStatement(new ReadHeapExpression("v2")));
-                list12.add(new ForkStatement(new WriteHeapStatement("v2",
-                        new ArithmeticExpression(
-                                new ReadHeapExpression("v2"),
-                                new ConstantExpression(10),
-                                '*'
+                list12.add(new ForkStatement(new MultipleStatements(
+                        Arrays.asList(
+                                new WriteHeapStatement("v2",
+                                        new ArithmeticExpression(
+                                                new ReadHeapExpression("v2"),
+                                                new ConstantExpression(10),
+                                                '*'
+                                        )),
+                                new PrintStatement(new ReadHeapExpression("v2")),
+                                new CountDownStatement("cnt")
                         ))));
 
-                list12.add(new CountDownStatement("cnt"));
-                list12.add(new PrintStatement(new ReadHeapExpression("v1")));
-                list12.add(new ForkStatement(new WriteHeapStatement("v1",
-                                new ArithmeticExpression(
-                                    new ReadHeapExpression("v1"),
-                                    new ConstantExpression(10),
-                                    '*'
-                                ))));
+                list12.add(new ForkStatement(new MultipleStatements(
+                        Arrays.asList(
+                                new WriteHeapStatement("v1",
+                                        new ArithmeticExpression(
+                                                new ReadHeapExpression("v1"),
+                                                new ConstantExpression(10),
+                                                '*'
+                                        )),
+                                new PrintStatement(new ReadHeapExpression("v1")),
+                                new CountDownStatement("cnt")
+                        ))));
+
                 list12.add(new NewLatchStatement("cnt", new ReadHeapExpression("v2")));
                 list12.add(new NewStatement("v3", new ConstantExpression(4)));
                 list12.add(new NewStatement("v2", new ConstantExpression(3)));
