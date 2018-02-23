@@ -2,6 +2,7 @@ package datastructures;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class LatchTable implements ICountDownLatch {
 
@@ -35,5 +36,9 @@ public class LatchTable implements ICountDownLatch {
     @Override
     public void replace(int adress, int value) {
         this.map.replace(adress, value);
+    }
+
+    public Set<Map.Entry<Integer, Integer>> entrySet() {
+        return this.map.entrySet();
     }
 }
