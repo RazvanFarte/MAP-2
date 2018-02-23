@@ -58,4 +58,12 @@ public class NewLatchStatement implements IStatement{
 
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "NewLatchStatement{" +
+                "variableName='" + variableName + '\'' +
+                ", expression=" + expression +
+                '}';
+    }
 }

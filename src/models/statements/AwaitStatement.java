@@ -42,4 +42,11 @@ public class AwaitStatement implements IStatement {
 
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "AwaitStatement{" +
+                "variableName='" + variableName + '\'' +
+                '}';
+    }
 }
