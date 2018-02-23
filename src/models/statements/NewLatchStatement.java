@@ -1,5 +1,6 @@
 package models.statements;
 
+import datastructures.ICountDownLatch;
 import datastructures.IStack;
 import models.expressions.Expression;
 import models.expressions.exceptions.DivisionByZeroException;
@@ -43,9 +44,12 @@ public class NewLatchStatement implements IStatement{
             throw new StatementException("New latch could not be executed", e);
         }
 
-        int freeAddress = programState.getLatchTable().getEmptyAddress();
-
-        programState.getLatchTable().put(freeAddress, value);
+        ICountDownLatch latch = programState.getLatchTable();
+        int freeAddress;
+        synchronized (latch) {
+            freeAddress = latch.getEmptyAddress();
+            latch.put(freeAddress, value);
+        }
 
         if(programState.getSymbolTable().containsKey(this.variableName))
             programState.getSymbolTable().replace(this.variableName, freeAddress);
