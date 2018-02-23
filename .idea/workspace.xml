@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd13115b-5223-4ee6-bbb0-ec99d22f4759" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/models/statements/ProgramState.java" afterPath="$PROJECT_DIR$/src/models/statements/ProgramState.java" />
+      <change beforePath="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" afterPath="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,21 +18,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NewLatchStatement.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewLatchStatement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/statements/NewLatchStatement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="52" column="78" lean-forward="false" selection-start-line="52" selection-start-column="78" selection-end-line="52" selection-end-column="78" />
+            <state relative-caret-position="140">
+              <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#836#837#0" expanded="true" />
+                <element signature="e#877#878#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LatchTable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/datastructures/LatchTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-30">
+              <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
                 <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#871#872#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,11 +147,11 @@
         <option value="$PROJECT_DIR$/src/datastructures/Stack2.java" />
         <option value="$PROJECT_DIR$/src/views/gui/ExecutionController.java" />
         <option value="$PROJECT_DIR$/src/views/gui/Execution.fxml" />
-        <option value="$PROJECT_DIR$/src/datastructures/ICountDownLatch.java" />
         <option value="$PROJECT_DIR$/src/datastructures/CountDownLatch.java" />
-        <option value="$PROJECT_DIR$/src/datastructures/LatchTable.java" />
         <option value="$PROJECT_DIR$/src/models/statements/ProgramState.java" />
+        <option value="$PROJECT_DIR$/src/datastructures/ICountDownLatch.java" />
         <option value="$PROJECT_DIR$/src/models/statements/NewLatchStatement.java" />
+        <option value="$PROJECT_DIR$/src/datastructures/LatchTable.java" />
       </list>
     </option>
   </component>
@@ -177,13 +196,6 @@
               <item name="MAP-Project2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAP-Project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAP-Project2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="statements" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MAP-Project2" type="b2602c69:ProjectViewProjectNode" />
@@ -877,34 +889,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/datastructures/ICountDownLatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/datastructures/LatchTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/datastructures/Heap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -933,20 +917,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructures/ICountDownLatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/statements/NewLatchStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="52" column="78" lean-forward="false" selection-start-line="52" selection-start-column="78" selection-end-line="52" selection-end-column="78" />
+        <state relative-caret-position="140">
+          <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructures/LatchTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
             <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
           </folding>
         </state>
       </provider>
