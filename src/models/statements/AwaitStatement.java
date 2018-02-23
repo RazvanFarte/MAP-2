@@ -34,7 +34,7 @@ public class AwaitStatement implements IStatement {
                 throw new StatementException("Value not in latch table");
             }
 
-            if(programState.getLatchTable().get(latchAddress) != 0) {
+            if(programState.getLatchTable().get(latchAddress) > 0) {
                 programState.getExecutionStack().push(this);
             }
         }

@@ -44,11 +44,10 @@ public class NewLatchStatement implements IStatement{
             throw new StatementException("New latch could not be executed", e);
         }
 
-        ICountDownLatch latch = programState.getLatchTable();
         int freeAddress;
-        synchronized (latch) {
-            freeAddress = latch.getEmptyAddress();
-            latch.put(freeAddress, value);
+        synchronized (programState.getLatchTable()) {
+            freeAddress = programState.getLatchTable().getEmptyAddress();
+            programState.getLatchTable().put(freeAddress, value);
         }
 
         if(programState.getSymbolTable().containsKey(this.variableName))

@@ -1,5 +1,7 @@
 package models.statements;
 
+import datastructures.ICountDownLatch;
+import datastructures.LatchTable;
 import models.statements.exceptions.StatementException;
 
 public class CountDownStatement implements IStatement {
@@ -35,7 +37,7 @@ public class CountDownStatement implements IStatement {
             }
 
             int latchValue = programState.getLatchTable().get(latchAddress);
-            if(programState.getLatchTable().get(latchAddress) > 0) {
+            if(latchValue > 0) {
                 programState.getLatchTable().replace(latchAddress, latchValue - 1);
                 programState.getOutput().add(programState.id);
             }
