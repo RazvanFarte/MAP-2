@@ -45,6 +45,7 @@ public class ForkStatement implements IStatement {
                 programState.output,
                 programState.fileDescriptors,
                 programState.heap,
+                programState.latchTable,
                 this.statement);
 
         return newProgramState;

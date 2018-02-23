@@ -202,7 +202,7 @@ public class ChooseProgramController {
         Stack2<IStatement> executionStack = new Stack2<>();
         executionStack.push(statement);
 
-        mRepository.add(new ProgramState(1, executionStack, new Dictionary<>(), new List<>(), new FileTable(), new Heap(), statement));
+        mRepository.add(new ProgramState(1, executionStack, new Dictionary<>(), new List<>(), new FileTable(), new Heap(), new LatchTable(), statement));
 
         return new Controller(mRepository);
     }
